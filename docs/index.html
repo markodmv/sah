@@ -51,11 +51,7 @@ header .wrap { padding-block: 12px 10px; display: flex; flex-direction: column; 
 .brand { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 h1 { font-family: var(--font-display); font-weight: 800; font-size: 28px; margin: 0; letter-spacing: -0.02em; }
 h1 span { color: var(--accent); }
-.syncbox { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .sync { font-size: 12px; color: var(--muted); text-align: right; line-height: 1.25; }
-.refresh, .icon-btn { flex: none; font: 600 13px var(--font-body); padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--accent); cursor: pointer; }
-.icon-btn { color: var(--muted); padding: 6px 9px; }
-.refresh:disabled { color: var(--muted); cursor: default; }
 
 .search { width: 100%; font: inherit; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
 .search:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -89,17 +85,6 @@ main { padding-block: 14px calc(84px + env(safe-area-inset-bottom, 0px)); }
 .note { font-size: 12.5px; color: var(--muted); margin: 0; }
 .note a { color: var(--accent); }
 
-.add, .settings { display: flex; flex-direction: column; gap: 8px; padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
-.add h2, .settings h2 { font: 700 17px var(--font-display); margin: 0; }
-.row { display: flex; gap: 8px; flex-wrap: wrap; }
-.row > * { flex: 1 1 140px; min-width: 0; }
-.btn { font: 600 14px var(--font-body); padding: 10px 14px; border-radius: 10px; border: 0; background: var(--accent); color: var(--surface); cursor: pointer; }
-.btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
-.btn.danger { background: var(--live); }
-.btn:disabled { opacity: 0.5; cursor: default; }
-.settings ol { margin: 0; padding-left: 20px; font-size: 13.5px; display: flex; flex-direction: column; gap: 4px; }
-.settings a { color: var(--accent); }
-.ok { color: var(--accent); font-weight: 600; }
 
 .p { padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; gap: 10px; }
 .p-name { font: 700 19px var(--font-display); margin: 0; overflow-wrap: anywhere; }
@@ -117,7 +102,6 @@ main { padding-block: 14px calc(84px + env(safe-area-inset-bottom, 0px)); }
 .mini li span { color: var(--muted); font-family: var(--font-mono); font-size: 12px; flex: none; text-align: right; }
 .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
 .links a { color: var(--accent); }
-.confirm { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; }
 
 nav.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
 nav.tabs .in { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; }
@@ -133,10 +117,7 @@ nav.tabs button[aria-selected="true"] { color: var(--accent); }
   <div class="wrap">
     <div class="brand">
       <h1>Šah<span>.</span></h1>
-      <div class="syncbox">
-        <div class="sync" id="sync">Učitavam…</div>
-        <button class="refresh" id="refresh" type="button">↻ Osvježi</button>
-      </div>
+      <div class="sync" id="sync">Učitavam…</div>
     </div>
     <div id="tFilters">
       <input class="search" id="q" type="search" placeholder="Traži turnir, grad, klub…" autocomplete="off">
@@ -149,34 +130,7 @@ nav.tabs button[aria-selected="true"] { color: var(--accent); }
 <main class="wrap">
   <section class="view" id="vTurniri"></section>
   <section class="view" id="vIgraci" hidden>
-    <form class="add" id="addForm">
-      <h2>Prati igrača</h2>
-      <div class="row">
-        <input class="search" id="pName" placeholder="Ime i prezime" required>
-        <input class="search" id="pFide" placeholder="FIDE ID (nije obavezno)" inputmode="numeric" pattern="[0-9]*">
-      </div>
-      <div class="row"><button class="btn" id="pAdd" type="submit">Dodaj</button></div>
-      <p class="note" id="addNote">Rejting i turnire novog igrača skripta popuni za minutu-dvije.</p>
-    </form>
     <div class="list" id="players"></div>
-    <section class="settings" id="settings">
-      <h2>Postavke</h2>
-      <p class="note" id="tokState"></p>
-      <ol id="tokHelp">
-        <li>Otvori <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → novi ključ (fine-grained)</a>.</li>
-        <li>Repository access: <b>Only select repositories</b> → odaberi <b id="repoName">sah</b>.</li>
-        <li>Permissions: <b>Contents</b> = Read and write, <b>Actions</b> = Read and write.</li>
-        <li>Generiraj ključ, kopiraj ga i zalijepi ovdje.</li>
-      </ol>
-      <div class="row">
-        <input class="search" id="tok" type="password" placeholder="github_pat_…" autocomplete="off">
-      </div>
-      <div class="row">
-        <button class="btn" id="tokSave" type="button">Spremi ključ</button>
-        <button class="btn ghost" id="tokDel" type="button">Ukloni ključ</button>
-      </div>
-      <p class="note">Ključ nije potreban za osvježavanje. Treba ti samo za dodavanje i uklanjanje igrača iz aplikacije. Ostaje samo u ovom pregledniku na ovom uređaju.</p>
-    </section>
   </section>
 </main>
 
@@ -188,15 +142,6 @@ nav.tabs button[aria-selected="true"] { color: var(--accent); }
 </nav>
 
 <script>
-// Repozitorij se čita iz adrese (korisnik.github.io/repo); lokalno se koristi zadana vrijednost.
-const REPO = (() => {
-  const m = location.hostname.match(/^([^.]+)\.github\.io$/);
-  const seg = location.pathname.split("/").filter(Boolean)[0];
-  return m ? { owner: m[1], name: seg || m[1] + ".github.io" } : { owner: "OWNER", name: "sah" };
-})();
-const WORKFLOW = "update.yml";
-const API = `https://api.github.com/repos/${REPO.owner}/${REPO.name}`;
-
 const AGES = [
   ["sve", "Svi"], ["mladi", "Mladi (sve)"], ["U8", "U8"], ["U10", "U10"], ["U12", "U12"], ["U14", "U14"],
   ["U16", "U16"], ["U18", "U18"], ["U20", "U20"], ["skole", "Škole"], ["zene", "Žene"], ["seniori", "Seniori"], ["open", "Open"]
@@ -211,16 +156,14 @@ const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } },
   set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, JSON.stringify(v)); } catch {} }
 };
+store.set("sah.token", null);  // ključ iz ranije verzije više ne treba
 const state = {
   tab: store.get("sah.tab", "t"),
   age: store.get("sah.age", "sve"),
   tc: store.get("sah.tc", "sve"),
   q: "",
-  data: null,
-  error: null,
-  token: store.get("sah.token", null),
-  run: null,          // zadnje pokretanje osvježavanja na GitHubu
-  confirmKey: null
+  data: store.get("sah.data", null),
+  error: null
 };
 
 const $ = (id) => document.getElementById(id);
@@ -230,7 +173,7 @@ const addDays = (iso, n) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDa
 const fmtDate = (iso) => { if (!iso) return ""; const [y, m, d] = iso.split("-"); return `${+d}. ${+m}. ${y}.`; };
 const fmtStamp = (iso) => new Date(iso).toLocaleString("hr-HR", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" });
 
-// ---------- podaci ----------
+// ---------- podaci (GitHub ih osvježava svaki sat) ----------
 
 async function loadData() {
   try {
@@ -238,140 +181,12 @@ async function loadData() {
     if (!res.ok) throw new Error(res.status);
     state.data = await res.json();
     state.error = null;
-    try { localStorage.setItem("sah.data", JSON.stringify(state.data)); } catch {}
+    store.set("sah.data", state.data);
   } catch {
     state.error = "Podaci se trenutno ne mogu učitati.";
-    if (!state.data) state.data = store.get("sah.data", null);
   }
   renderAll();
 }
-
-async function gh(path, opts = {}) {
-  const headers = { Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
-  if (state.token) headers.Authorization = `Bearer ${state.token}`;
-  const res = await fetch(API + path, { ...opts, headers: { ...headers, ...(opts.headers || {}) } });
-  if (!res.ok) { const e = new Error(`GitHub ${res.status}`); e.status = res.status; throw e; }
-  return res.status === 204 ? null : res.json();
-}
-
-async function latestRun() {
-  try {
-    const r = await gh(`/actions/workflows/${WORKFLOW}/runs?per_page=1`);
-    state.run = r.workflow_runs && r.workflow_runs[0] ? r.workflow_runs[0] : null;
-  } catch { /* bez API-ja samo nema statusa */ }
-  renderSync();
-  return state.run;
-}
-
-let pollTimer = null;
-function pollRun(startedAfter) {
-  clearTimeout(pollTimer);
-  const tick = async () => {
-    const run = await latestRun();
-    const fresh = run && Date.parse(run.created_at) >= startedAfter - 60000;
-    if (!fresh || run.status !== "completed") { pollTimer = setTimeout(tick, 8000); return; }
-    // Pages treba trenutak da objavi nove podatke
-    setTimeout(loadData, 15000);
-    setTimeout(loadData, 45000);
-  };
-  pollTimer = setTimeout(tick, 4000);
-}
-
-$("refresh").addEventListener("click", async () => {
-  if (!state.token) {
-    // Bez ključa: GitHub ionako osvježava svaki sat, pa samo dohvati najnovije podatke
-    $("refresh").disabled = true;
-    $("sync").textContent = "Učitavam…";
-    await Promise.all([loadData(), latestRun()]);
-    $("refresh").disabled = false;
-    return;
-  }
-  $("refresh").disabled = true;
-  const t0 = Date.now();
-  try {
-    await gh(`/actions/workflows/${WORKFLOW}/dispatches`, { method: "POST", body: JSON.stringify({ ref: "main" }) });
-    state.run = { status: "queued", created_at: new Date().toISOString() };
-    renderSync();
-    pollRun(t0);
-  } catch (e) {
-    $("sync").textContent = e.status === 401 || e.status === 403 || e.status === 404 ? "Ključ nije ispravan ili nema prava." : "Pokretanje nije uspjelo.";
-    $("refresh").disabled = false;
-  }
-});
-
-// players.json u repozitoriju: čitanje i spremanje preko GitHub API-ja
-const b64enc = (s) => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
-const b64dec = (s) => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
-
-async function editPlayers(change, message) {
-  const file = await gh(`/contents/docs/players.json?ref=main&t=${Date.now()}`);
-  const list = JSON.parse(b64dec(file.content));
-  const next = change(list);
-  await gh(`/contents/docs/players.json`, {
-    method: "PUT",
-    body: JSON.stringify({ message, content: b64enc(JSON.stringify(next, null, 2) + "\n"), sha: file.sha, branch: "main" })
-  });
-  return next;
-}
-
-$("addForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const name = $("pName").value.trim();
-  const fideId = $("pFide").value.trim();
-  if (!name) return;
-  if (!state.token) { $("addNote").textContent = "Za dodavanje igrača prvo spremi GitHub ključ u Postavkama ispod."; return; }
-  $("pAdd").disabled = true;
-  const t0 = Date.now();
-  try {
-    await editPlayers((list) => {
-      const k = fideId || name.toLowerCase();
-      if (list.some((p) => String(p.fideId || p.name.toLowerCase()) === k)) return list;
-      return [...list, { name, fideId: fideId ? +fideId : null }];
-    }, `Prati igrača: ${name}`);
-    $("pName").value = ""; $("pFide").value = "";
-    $("addNote").textContent = `Dodan: ${name}. Osvježavanje je pokrenuto, podaci stižu za minutu-dvije.`;
-    state.pending = [...(state.pending || []), { name, fideId: fideId ? +fideId : null }];
-    renderPlayers();
-    pollRun(t0);
-  } catch (err) {
-    $("addNote").textContent = err.status === 401 || err.status === 403 || err.status === 404
-      ? "Ključ nema pravo pisanja u repozitorij. Provjeri Contents = Read and write."
-      : "Spremanje nije uspjelo. Pokušaj ponovno.";
-  }
-  $("pAdd").disabled = false;
-});
-
-$("players").addEventListener("click", async (e) => {
-  const b = e.target.closest("button"); if (!b) return;
-  if (b.dataset.ask) { state.confirmKey = b.dataset.ask; renderPlayers(); return; }
-  if (b.hasAttribute("data-cancel")) { state.confirmKey = null; renderPlayers(); return; }
-  if (b.dataset.del) {
-    if (!state.token) { $("addNote").textContent = "Za uklanjanje igrača prvo spremi GitHub ključ."; return; }
-    const p = playersList().find((x) => x.key === b.dataset.del);
-    b.disabled = true;
-    const t0 = Date.now();
-    try {
-      await editPlayers((list) => list.filter((x) => !(
-        (p.fideId && String(x.fideId) === String(p.fideId)) || x.name.trim().toLowerCase() === p.name.trim().toLowerCase()
-      )), `Više ne prati: ${p.name}`);
-      state.removed = [...(state.removed || []), p.key];
-      state.confirmKey = null;
-      renderPlayers(); renderTournaments();
-      pollRun(t0);
-    } catch { $("addNote").textContent = "Uklanjanje nije uspjelo. Pokušaj ponovno."; b.disabled = false; }
-  }
-});
-
-$("tokSave").onclick = async () => {
-  const v = $("tok").value.trim();
-  if (!v) return;
-  state.token = v; store.set("sah.token", v);
-  $("tok").value = "";
-  try { await gh(""); $("tokState").innerHTML = `<span class="ok">Ključ radi.</span> Možeš osvježavati i dodavati igrače.`; }
-  catch { $("tokState").textContent = "Ključ je spremljen, ali GitHub ga ne prihvaća za ovaj repozitorij. Provjeri korake ispod."; }
-  latestRun();
-};
-$("tokDel").onclick = () => { state.token = null; store.set("sah.token", null); renderSettings(); };
 
 // ---------- prikaz ----------
 
@@ -399,21 +214,13 @@ function matchAge(t) {
   return g.includes(state.age);
 }
 
-function playersList() {
-  const removed = new Set(state.removed || []);
-  const list = ((state.data && state.data.players) || []).filter((p) => !removed.has(p.key));
-  for (const p of state.pending || []) {
-    if (!list.some((x) => (p.fideId && x.fideId === p.fideId) || x.name.toLowerCase() === p.name.toLowerCase())) list.push({ ...p, key: "pending:" + p.name, pending: true });
-  }
-  return list;
-}
+const playersList = () => (state.data && state.data.players) || [];
 
 function renderTournaments() {
   const el = $("vTurniri");
   if (!state.data) { el.innerHTML = `<div class="empty">${esc(state.error || "Učitavam turnire…")}</div>`; return; }
-  const all = state.data.tournaments || [];
   const q = state.q.trim().toLowerCase();
-  const rows = all
+  const rows = (state.data.tournaments || [])
     .filter((t) => matchAge(t) && (state.tc === "sve" || t.kind === state.tc))
     .filter((t) => !q || [t.name, t.place, t.organizer].join(" ").toLowerCase().includes(q))
     .filter((t) => statusOf(t) !== "past" || (t.to && t.to >= addDays(today(), -7)))
@@ -431,7 +238,7 @@ function renderTournaments() {
     const title = k === "bez-datuma" ? "Bez datuma" : `${MONTHS[+k.slice(5) - 1]} ${k.slice(0, 4)}.`;
     html += `<div class="month"><h2>${esc(title)} · ${list.length}</h2><div class="list">${list.map(card).join("")}</div></div>`;
   }
-  html += `<p class="note">Izvor: <a href="https://chess-results.com/fed.aspx?lan=1&fed=CRO" target="_blank" rel="noopener">chess-results.com – federacija CRO</a>. Podaci se sami osvježavaju svaki sat od 5 do 22 h, a ↻ Osvježi dohvaća najnovije. Dodir na turnir otvara njegovu stranicu.</p>`;
+  html += `<p class="note">Izvor: <a href="https://chess-results.com/fed.aspx?lan=1&fed=CRO" target="_blank" rel="noopener">chess-results.com – federacija CRO</a>. Podaci se sami osvježavaju svaki sat od 5 do 22 h. Dodir na turnir otvara njegovu stranicu.</p>`;
   el.innerHTML = html;
 }
 
@@ -465,7 +272,7 @@ function renderPlayers() {
   const el = $("players");
   if (!state.data) { el.innerHTML = `<div class="empty">${esc(state.error || "Učitavam igrače…")}</div>`; return; }
   const list = playersList();
-  if (!list.length) { el.innerHTML = `<div class="empty">Još ne pratiš nijednog igrača. Upiši ime i FIDE ID gore.</div>`; return; }
+  if (!list.length) { el.innerHTML = `<div class="empty">Još ne pratiš nijednog igrača.</div>`; return; }
   el.innerHTML = list.slice().sort((a, b) => a.name.localeCompare(b.name)).map((p) => {
     const r = p.ratings || {}, d = p.deltas || {};
     return `<article class="p">
@@ -473,52 +280,26 @@ function renderPlayers() {
         <h2 class="p-name">${esc(p.title ? p.title + " " : "")}${esc(p.name)}</h2>
         <div class="p-sub">${esc([p.fideId ? "FIDE " + p.fideId : null, p.birthYear ? "rođ. " + p.birthYear : null, p.federation].filter(Boolean).join(" · ")) || "&nbsp;"}</div>
       </div>
-      ${p.pending ? `<p class="note">Čeka osvježavanje podataka.</p>` : `
       <div class="ratings">
         <div class="r"><small>Standard</small><b>${r.std || "–"}</b>${delta(d.std)}</div>
         <div class="r"><small>Ubrzani</small><b>${r.rapid || "–"}</b>${delta(d.rapid)}</div>
         <div class="r"><small>Brzopotezni</small><b>${r.blitz || "–"}</b>${delta(d.blitz)}</div>
-      </div>`}
+      </div>
       ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
       ${(p.upcoming || []).length ? `<h3>Prijavljen na</h3><ul class="mini">${p.upcoming.map((u) => `<li><a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.name)}</a><span>${esc(fmtDate(u.from))}</span></li>`).join("")}</ul>` : ""}
       ${(p.recent || []).length ? `<h3>Zadnji turniri</h3><ul class="mini">${p.recent.map((u) => `<li><a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.name)}</a><span>${esc(u.result || fmtDate(u.to))}</span></li>`).join("")}</ul>` : ""}
       <div class="links">
         ${p.fideId ? `<a href="https://ratings.fide.com/profile/${encodeURIComponent(p.fideId)}" target="_blank" rel="noopener">FIDE profil</a>` : ""}
         ${p.fideId ? `<a href="https://chessstats.app/player/${encodeURIComponent(p.fideId)}" target="_blank" rel="noopener">Povijest turnira</a>` : ""}
-        <a href="https://chess-results.com/SpielerSuche.aspx?lan=1" target="_blank" rel="noopener">Traži na chess-results</a>
       </div>
-      ${p.pending ? "" : state.confirmKey === p.key
-        ? `<div class="confirm">Prestati pratiti ${esc(p.name)}? <button class="btn danger" data-del="${esc(p.key)}">Ukloni</button><button class="btn ghost" data-cancel>Odustani</button></div>`
-        : `<div><button class="btn ghost" data-ask="${esc(p.key)}">Prestani pratiti</button></div>`}
     </article>`;
   }).join("");
 }
 
-// Automatsko osvježavanje: svaki sat u :17 UTC-sata 4–21 (GitHub ga obično pokrene koju minutu kasnije)
-function nextAuto() {
-  const d = new Date();
-  d.setUTCMinutes(17, 0, 0);
-  if (d <= new Date()) d.setUTCHours(d.getUTCHours() + 1);
-  if (d.getUTCHours() > 21) { d.setUTCDate(d.getUTCDate() + 1); d.setUTCHours(4); }
-  if (d.getUTCHours() < 4) d.setUTCHours(4);
-  return "oko " + d.toLocaleTimeString("hr-HR", { hour: "2-digit", minute: "2-digit" });
-}
-
 function renderSync() {
-  const run = state.run;
-  const busy = run && run.status !== "completed" && Date.now() - Date.parse(run.created_at) < 20 * 60000;
-  let txt;
-  if (busy) txt = "Osvježavam…";
-  else if (state.data && state.data.updatedAt) txt = `Osvježeno ${fmtStamp(state.data.updatedAt)} · sljedeće ${nextAuto()}`;
-  else txt = state.error || "";
-  if (run && run.status === "completed" && run.conclusion === "failure" && (!state.data || Date.parse(run.created_at) > Date.parse(state.data.updatedAt))) txt += " · zadnje osvježavanje nije uspjelo";
-  $("sync").textContent = txt;
-  $("refresh").disabled = !!busy;
-}
-
-function renderSettings() {
-  $("repoName").textContent = REPO.name;
-  $("tokState").innerHTML = state.token ? `<span class="ok">Ključ je spremljen.</span>` : "Bez ključa sve radi osim dodavanja i uklanjanja igrača.";
+  $("sync").textContent = state.data && state.data.updatedAt
+    ? `Zadnje osvježeno ${fmtStamp(state.data.updatedAt)}`
+    : state.error || "";
 }
 
 function renderAll() { renderSync(); renderTournaments(); renderPlayers(); }
@@ -541,12 +322,10 @@ chips($("tcChips"), TCS, "tc", "tc");
 if (location.hash === "#igraci") state.tab = "p";
 if (location.hash === "#turniri") state.tab = "t";
 setTab(state.tab);
-renderSettings();
-state.data = store.get("sah.data", null);
 renderAll();
 loadData();
-latestRun();
-document.addEventListener("visibilitychange", () => { if (!document.hidden) { loadData(); latestRun(); } });
+// Kad se aplikacija ponovno otvori, učitaj najnovije podatke
+document.addEventListener("visibilitychange", () => { if (!document.hidden) loadData(); });
 </script>
 </body>
 </html>
