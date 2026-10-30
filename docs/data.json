@@ -1,0 +1,789 @@
+{
+ "updatedAt": "2026-10-30T13:58:04.101Z",
+ "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
+ "tournaments": [
+  {
+   "tnr": 1529048,
+   "name": "Berba maslina u Travnom - brzopotezni turnir ŠK Travno",
+   "url": "https://chess-results.com/tnr1529048.aspx?lan=1",
+   "organizer": "ŠK Travno",
+   "place": "Božidara Magovca 63, Travno",
+   "from": "2026-10-27",
+   "to": "2026-10-27",
+   "rounds": 9,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1528160,
+   "name": "Ekipno prvenstvo ŠŠD OŠ KZŽ-e u šahu šk. godina 2026./2027. - dječaci",
+   "url": "https://chess-results.com/tnr1528160.aspx?lan=1",
+   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
+   "place": "Dom kulture, Gornje Jesenje",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528162,
+   "name": "Ekipno prvenstvo ŠŠD OŠ KZŽ-e u šahu šk. godina 2026./2027. - djevojčice",
+   "url": "https://chess-results.com/tnr1528162.aspx?lan=1",
+   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
+   "place": "Dom kulture, Gornje Jesenje",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 2,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528240,
+   "name": "Ekipno prvenstvo ŠŠD SŠ KZŽ-e u šahu šk. godina 2026./2027. - mladići",
+   "url": "https://chess-results.com/tnr1528240.aspx?lan=1",
+   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
+   "place": "Dom Kulture, Gornje Jesenje",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 5,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "mladi",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528241,
+   "name": "Ekipno prvenstvo ŠŠD SŠ KZŽ-e u šahu šk. godina 2026./2027. - djevojke",
+   "url": "https://chess-results.com/tnr1528241.aspx?lan=1",
+   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
+   "place": "Dom kulture, Gornje Jesenje",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 2,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528789,
+   "name": "Prvenstvo školskih sportskih društava Primorsko-goranske žup. - OŠ djevojčice 2026/2027",
+   "url": "https://chess-results.com/tnr1528789.aspx?lan=1",
+   "organizer": "Savez školskih sportskih društava PGŽ",
+   "place": "Rijeka",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528790,
+   "name": "Prvenstvo školskih sportskih društava Primorsko-goranske županije - SŠ djevojke 2026/2027",
+   "url": "https://chess-results.com/tnr1528790.aspx?lan=1",
+   "organizer": "Savez školskih sportskih društava PGŽ",
+   "place": "Rijeka",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 5,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528885,
+   "name": "Pojedinačno prvenstvo OŠ. Ljudevita Modeca, Križevci učenici 1-4 razreda",
+   "url": "https://chess-results.com/tnr1528885.aspx?lan=1",
+   "organizer": "ŠK Križevci i OŠ. Lj. Modeca, Križevci",
+   "place": "Križevci, prostorija kluba ŠK Križevci, Potočka 26",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 5,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1528900,
+   "name": "Pojedinačno prvenstvo OŠ. Ljudevita Modeca, Križevci učenice 5-8 razreda",
+   "url": "https://chess-results.com/tnr1528900.aspx?lan=1",
+   "organizer": "ŠK Križevci i OŠ. Lj. Modeca, Križevci",
+   "place": "Križevci, prostorija kluba ŠK Križevci, Potočka 26",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 5,
+   "tc": "10'+5\"",
+   "kind": "blitz",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1529652,
+   "name": "Srijedom U Brestovcu 160",
+   "url": "https://chess-results.com/tnr1529652.aspx?lan=1",
+   "organizer": "ŠK BRESTOVAC I OPĆINA BRESTOVAC",
+   "place": "POŽEŠKA 45 BRESTOVAC",
+   "from": "2026-10-28",
+   "to": "2026-10-28",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1529423,
+   "name": "Prvenstvo učenika srednjih škola Varaždinske županije 2026/27 - Veliki PUŽ - Srednje Škole - 1. turnir",
+   "url": "https://chess-results.com/tnr1529423.aspx?lan=1",
+   "organizer": "Centar izvrsnosti za šah Varaždinske županije",
+   "place": "Varaždin",
+   "from": "2026-10-29",
+   "to": "2026-10-29",
+   "rounds": 7,
+   "tc": "13'",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1530236,
+   "name": "Brzopotezni turnir ŠK Rijeka -09 /16 jesen- 2026",
+   "url": "https://chess-results.com/tnr1530236.aspx?lan=1",
+   "organizer": "Chess Club Rijeka",
+   "place": "Rijeka, Šahovski dom, Blaža Polića 2/2",
+   "from": "2026-10-29",
+   "to": "2026-10-29",
+   "rounds": 13,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1518532,
+   "name": "Pojedinačno Prvenstvo Dubrovačko-Neretvanske Županije Za Mlade Do 20 Godina U Brzopoteznom Šahu Za 2026. Godinu",
+   "url": "https://chess-results.com/tnr1518532.aspx?lan=1",
+   "organizer": "Šahovski savez Dubrovačko-neretvanske županije",
+   "place": "Dubrovnik, Liechtensteinov put 12",
+   "from": "2026-10-30",
+   "to": "2026-10-30",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U20"
+   ]
+  },
+  {
+   "tnr": 1529426,
+   "name": "Prvenstvo učenika osnovnih škola Varaždinske županije 2026/27 - PUŽ - Niži Razredi - 1. turnir",
+   "url": "https://chess-results.com/tnr1529426.aspx?lan=1",
+   "organizer": "Centar izvrsnosti za šah Varaždinske županije",
+   "place": "Ljubeščica",
+   "from": "2026-10-30",
+   "to": "2026-10-30",
+   "rounds": 7,
+   "tc": "13'",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1529427,
+   "name": "Prvenstvo učenika osnovnih škola Varaždinske županije 2026/27 - PUŽ - Viši Razredi - 1. turnir",
+   "url": "https://chess-results.com/tnr1529427.aspx?lan=1",
+   "organizer": "Centar izvrsnosti za šah Varaždinske županije",
+   "place": "Ljubeščica",
+   "from": "2026-10-30",
+   "to": "2026-10-30",
+   "rounds": 7,
+   "tc": "13'",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1518533,
+   "name": "Pojedinačno Prvenstvo Dubrovačko-Neretvanske Županije Za Mlade Do 20 Godina U Ubrzanom Šahu Za 2026. Godinu",
+   "url": "https://chess-results.com/tnr1518533.aspx?lan=1",
+   "organizer": "Šahovski savez Dubrovačko-neretvanske županije",
+   "place": "Dubrovnik, Liechtensteinov put 12",
+   "from": "2026-10-31",
+   "to": "2026-10-31",
+   "rounds": 7,
+   "tc": "15'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U20"
+   ]
+  },
+  {
+   "tnr": 1496217,
+   "name": "29.Božićni rejting Fid-e turnir 3.11.-7.12.2026. ŠK Ruščica",
+   "url": "https://chess-results.com/tnr1496217.aspx?lan=1",
+   "organizer": "Šahovski klub Ruščica",
+   "place": "Ivane Brlić Mažuranić 3. 35208 Ruščica",
+   "from": "2026-11-03",
+   "to": "2026-12-07",
+   "rounds": 7,
+   "tc": "60'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1507981,
+   "name": "Otvoreno prvenstvo OBŽ-a u ubrzanom šahu",
+   "url": "https://chess-results.com/tnr1507981.aspx?lan=1",
+   "organizer": "Osječki šahovski savez",
+   "place": "Osijek",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 9,
+   "tc": "10'+3\"",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1522483,
+   "name": "III. Međunarodni brzopotezni turnir \"Martinus 2026.\" – A turnir",
+   "url": "https://chess-results.com/tnr1522483.aspx?lan=1",
+   "organizer": "Šahovski klub Dugo Selo",
+   "place": "Dugo Selo, restoran KTC, Savski odvojak II 12",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 11,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1522486,
+   "name": "III. Međunarodni brzopotezni turnir \"Martinus 2026.\" – B turnir",
+   "url": "https://chess-results.com/tnr1522486.aspx?lan=1",
+   "organizer": "Šahovski klub Dugo Selo",
+   "place": "Dugo Selo, restoran KTC, Savski odvojak II 12",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 11,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1525845,
+   "name": "Memorijalni Turnir Aleksandar Vukić 2026. - subota 7.11. od 15,45 h - FIDE Blitz rating, Mjesni odbor Janko Matko u Zagrebu, max.35 igrača",
+   "url": "https://chess-results.com/tnr1525845.aspx?lan=1",
+   "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
+   "place": "Zagreb, Mjesni odbor Janko Matko",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1451209,
+   "name": "Međugradski memorijal Nenad Petrović - Hrvoje Bartolović, nedjelja 8.11. u 10:30 - simultano u gradovima",
+   "url": "https://chess-results.com/tnr1451209.aspx?lan=1",
+   "organizer": "ŠK Aer, Partneri za problemski šah",
+   "place": "Zagreb, Dubrovnik, Split",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 1,
+   "tc": "120'",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1488412,
+   "name": "Memorijalni turnir \"Franjo Kvakan i Franjo Kanižaj\" - Open \"A\" 2026.",
+   "url": "https://chess-results.com/tnr1488412.aspx?lan=1",
+   "organizer": "ŠK \"Sveta Marija i Donji Mihaljevec\"",
+   "place": "Sveta Marija, Dom kulture, Trg bana Jelačića 24",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "15'",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1488415,
+   "name": "Memorijalni turnir \"Franjo Kvakan i Franjo Kanižaj\" - Kadetski \"B\" 2026.",
+   "url": "https://chess-results.com/tnr1488415.aspx?lan=1",
+   "organizer": "ŠK \"Sveta Marija i Donji Mihaljevec\"",
+   "place": "Sveta Marija, Dom kulture, Trg bana Jelačića 24",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "15'",
+   "kind": "rapid",
+   "groups": [
+    "kadeti"
+   ]
+  },
+  {
+   "tnr": 1505152,
+   "name": "Međunarodni šahovski turnir Dan grada Makarske 2026",
+   "url": "https://chess-results.com/tnr1505152.aspx?lan=1",
+   "organizer": "Šahovski klub Makarska",
+   "place": "Volicija 5, Apfel Arena Makarska",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 9,
+   "tc": "10'",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1520871,
+   "name": "Turnir Blitz Visoko 2026",
+   "url": "https://chess-results.com/tnr1520871.aspx?lan=1",
+   "organizer": "ŠK Visoko",
+   "place": null,
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1522125,
+   "name": "II. memorijalni turnir za poginule branitelje 144. brigade HV-a Sesvete",
+   "url": "https://chess-results.com/tnr1522125.aspx?lan=1",
+   "organizer": "Udruga veterana Domovinskog rata 144. brigade HV-a Sesvete i ŠK Vrustun 1252",
+   "place": "Dvorana ŠK Sesvete-Agroproteinka, Kelekova 2, Sesvete",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1522407,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M10",
+   "url": "https://chess-results.com/tnr1522407.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U10"
+   ]
+  },
+  {
+   "tnr": 1522414,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M12",
+   "url": "https://chess-results.com/tnr1522414.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U12"
+   ]
+  },
+  {
+   "tnr": 1522487,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M14",
+   "url": "https://chess-results.com/tnr1522487.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U14"
+   ]
+  },
+  {
+   "tnr": 1522496,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M16",
+   "url": "https://chess-results.com/tnr1522496.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U16"
+   ]
+  },
+  {
+   "tnr": 1522497,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž16",
+   "url": "https://chess-results.com/tnr1522497.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": null,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U16",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1522501,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M18",
+   "url": "https://chess-results.com/tnr1522501.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": null,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U18"
+   ]
+  },
+  {
+   "tnr": 1514696,
+   "name": "XIII. otvoreno prvenstvo KZŽ-e za mlade do 12 godina, Krapina, 14.11.2026.",
+   "url": "https://chess-results.com/tnr1514696.aspx?lan=1",
+   "organizer": "Šahovski savez Krapinsko-zagorske županije; tehnički organizator ŠK Krapina",
+   "place": "Krapina, Restoran KTC Krapina",
+   "from": "2026-11-14",
+   "to": "2026-11-14",
+   "rounds": 9,
+   "tc": "8'+4\"",
+   "kind": "rapid",
+   "groups": [
+    "U12"
+   ]
+  },
+  {
+   "tnr": 1514697,
+   "name": "XIII. otvoreno prvenstvo KZŽ-e za mlade do 16 godina, Krapina, 14.11.2026.",
+   "url": "https://chess-results.com/tnr1514697.aspx?lan=1",
+   "organizer": "Šahovski savez Krapinsko-zagorske županije; tehnički organizator ŠK Krapina",
+   "place": "Krapina, Restoran KTC Krapina",
+   "from": "2026-11-14",
+   "to": "2026-11-14",
+   "rounds": 9,
+   "tc": "8'+4\"",
+   "kind": "rapid",
+   "groups": [
+    "U16"
+   ]
+  },
+  {
+   "tnr": 1528664,
+   "name": "Jesenski Kup 2026-27 (GP Akademije ŠK Dubrovnik)",
+   "url": "https://chess-results.com/tnr1528664.aspx?lan=1",
+   "organizer": "Šahovski klub Dubrovnik",
+   "place": "Dubrovnik, Liechtensteinov put 12 (Dvorana za borilačke športove-1.kat)",
+   "from": "2026-11-14",
+   "to": "2026-11-14",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1486757,
+   "name": "Dan Sjećanja Na Žrtve Domovinskog Rata, Rapis, nedjelja 15.11.2026. u 10h",
+   "url": "https://chess-results.com/tnr1486757.aspx?lan=1",
+   "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
+   "place": "Zagreb, MO Janko Matko",
+   "from": "2026-11-15",
+   "to": "2026-11-15",
+   "rounds": 7,
+   "tc": "12'+3\"",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1523186,
+   "name": "XII. memorijal Želimir Rodek 2026. - \"A\" kvalifikacijski turnir",
+   "url": "https://chess-results.com/tnr1523186.aspx?lan=1",
+   "organizer": "ŠD Varaždin i Udruga društva športske rekreacije HEP-a",
+   "place": "Varaždin, restoran “Lav”, Ante Starčevića 27",
+   "from": "2026-11-15",
+   "to": "2026-11-15",
+   "rounds": 12,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1504571,
+   "name": "II. Memorijalni šahovski turnir \"Vebi Abazi\", 22.11.2026., Ploče",
+   "url": "https://chess-results.com/tnr1504571.aspx?lan=1",
+   "organizer": "Šahovski klub Ploče",
+   "place": "Hotel Tolero, Obala kralja Petra Krešimira IV. 1, Ploče",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1530446,
+   "name": "28 ženski šahovski turnir \"Čarobni prsten\" otvoreno pojedinačno prvenstvo OBŽ",
+   "url": "https://chess-results.com/tnr1530446.aspx?lan=1",
+   "organizer": "ŠK Hrvatska čitaonica, ŠS Osječko-baranjske županije",
+   "place": "Valpovo, hotel \"Villa Valpovo\"",
+   "from": "2026-12-04",
+   "to": "2026-12-06",
+   "rounds": 7,
+   "tc": "45'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1506974,
+   "name": "Međunarodni brzopotezni turnir ‘’Brod-2026“ 06.12.2026",
+   "url": "https://chess-results.com/tnr1506974.aspx?lan=1",
+   "organizer": "ŠK Brod",
+   "place": "Dom HVIDRE, ul. Stjepana Marjanovića 2, Sl.Brod",
+   "from": "2026-12-06",
+   "to": "2026-12-06",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1510353,
+   "name": "4. Otvoreni brzopotezni turnir \"Sv. Katarina\" A - seniorski turnir",
+   "url": "https://chess-results.com/tnr1510353.aspx?lan=1",
+   "organizer": "Šahovski klub Gornji Mihaljevec",
+   "place": "Restoran \"Štefova klet\", Gornja Dubrava 21",
+   "from": "2026-12-06",
+   "to": "2026-12-06",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1510357,
+   "name": "4. Otvoreni ubrzani kadetski turnir \"Sv. Katarina\" B - kadetski turnir",
+   "url": "https://chess-results.com/tnr1510357.aspx?lan=1",
+   "organizer": "Šahovski klub Gornji Mihaljevec",
+   "place": "Restoran \"Štefova klet\", Gornja Dubrava 21",
+   "from": "2026-12-06",
+   "to": "2026-12-06",
+   "rounds": 8,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "kadeti"
+   ]
+  },
+  {
+   "tnr": 1475027,
+   "name": "2. Adventski Šahovski Festival 2026- Crikvenica Open A turnir",
+   "url": "https://chess-results.com/tnr1475027.aspx?lan=1",
+   "organizer": "ŠAHOVSKI KLUB CRIKVENICA",
+   "place": "Hotel Marina Selce, Emila Antića 73 , 51266 Selce",
+   "from": "2026-12-10",
+   "to": "2026-12-16",
+   "rounds": 9,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1475033,
+   "name": "2. Adventski Šahovski Festival 2026- Crikvenica Open B turnir",
+   "url": "https://chess-results.com/tnr1475033.aspx?lan=1",
+   "organizer": "ŠAHOVSKI KLUB CRIKVENICA",
+   "place": "Hotel Marina Selce, Emila Antića 73 , 51266 Selce",
+   "from": "2026-12-10",
+   "to": "2026-12-16",
+   "rounds": 9,
+   "tc": "60'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1432775,
+   "name": "4. Otvoreni Međunarodni Šahovski Turnir Dubrovnik Advent 2026 Dubrovnik, Valamar Lacroma Dubrovnik Hotel, 17.12-20.12.2026.",
+   "url": "https://chess-results.com/tnr1432775.aspx?lan=1",
+   "organizer": "ŠK Dubrovnik, Dubrovnik",
+   "place": "Dubrovnik, Valamar Lacroma Dubrovnik Hotel, Iva Dulčića 34",
+   "from": "2026-12-17",
+   "to": "2026-12-20",
+   "rounds": 7,
+   "tc": "60'",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1485530,
+   "name": "Međunarodni otvoreni šahovski turnir \"31st Open Bošnjaci\", 03-09.01.2027",
+   "url": "https://chess-results.com/tnr1485530.aspx?lan=1",
+   "organizer": "Chess club Bosnjaci Bošnjaci",
+   "place": "Kino dvorana dom kulture, Bošnjaci",
+   "from": "2027-01-03",
+   "to": "2027-01-09",
+   "rounds": 9,
+   "tc": "90'",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1529515,
+   "name": "Zadar Chess Festival, C-turnir, Zadar, 28.08.-04.09.2027.",
+   "url": "https://chess-results.com/tnr1529515.aspx?lan=1",
+   "organizer": "ŠK Casper, Zadar",
+   "place": "Zadar, Centar za mlade Zadar, Stjepana Radića 11c",
+   "from": "2027-08-28",
+   "to": "2027-09-04",
+   "rounds": 9,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1529516,
+   "name": "Zadar Chess Festival, B-turnir, Zadar, 28.08.-04.09.2027.",
+   "url": "https://chess-results.com/tnr1529516.aspx?lan=1",
+   "organizer": "ŠK Casper, Zadar",
+   "place": "Zadar, Centar za mlade Zadar, Stjepana Radića 11c",
+   "from": "2027-08-28",
+   "to": "2027-09-04",
+   "rounds": 9,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1529517,
+   "name": "Zadar Chess Festival, A-turnir, Zadar, 28.08.-04.09.2027.",
+   "url": "https://chess-results.com/tnr1529517.aspx?lan=1",
+   "organizer": "ŠK Casper, Zadar",
+   "place": "Zadar, Centar za mlade Zadar, Stjepana Radića 11c",
+   "from": "2027-08-28",
+   "to": "2027-09-04",
+   "rounds": 9,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  }
+ ],
+ "players": [
+  {
+   "key": "david vasek",
+   "name": "David Vašek",
+   "fideId": 79326854,
+   "foundFideId": true,
+   "title": null,
+   "birthYear": 2016,
+   "federation": "Croatia",
+   "ratings": {
+    "std": 1441,
+    "rapid": 1570,
+    "blitz": 1514
+   },
+   "deltas": {},
+   "upcoming": [
+    {
+     "tnr": 1507981,
+     "name": "Otvoreno prvenstvo OBŽ-a u ubrzanom šahu",
+     "url": "https://chess-results.com/tnr1507981.aspx?lan=1",
+     "from": "2026-11-07"
+    }
+   ],
+   "recent": [],
+   "note": null
+  }
+ ]
+}
