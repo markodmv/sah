@@ -175,7 +175,7 @@ nav.tabs button[aria-selected="true"] { color: var(--accent); }
         <button class="btn" id="tokSave" type="button">Spremi ključ</button>
         <button class="btn ghost" id="tokDel" type="button">Ukloni ključ</button>
       </div>
-      <p class="note">Ključ ostaje samo u ovom pregledniku na ovom uređaju. Treba ti za gumb Osvježi i za dodavanje igrača.</p>
+      <p class="note">Ključ nije potreban za osvježavanje. Treba ti samo za dodavanje i uklanjanje igrača iz aplikacije. Ostaje samo u ovom pregledniku na ovom uređaju.</p>
     </section>
   </section>
 </main>
@@ -279,10 +279,11 @@ function pollRun(startedAfter) {
 
 $("refresh").addEventListener("click", async () => {
   if (!state.token) {
-    await loadData();
-    setTab("p");
-    $("tokState").textContent = "Za pokretanje novog osvježavanja dodaj GitHub ključ. Bez ključa gumb samo ponovno učita zadnje podatke.";
-    $("settings").scrollIntoView({ behavior: "smooth" });
+    // Bez ključa: GitHub ionako osvježava svaki sat, pa samo dohvati najnovije podatke
+    $("refresh").disabled = true;
+    $("sync").textContent = "Učitavam…";
+    await Promise.all([loadData(), latestRun()]);
+    $("refresh").disabled = false;
     return;
   }
   $("refresh").disabled = true;
@@ -430,7 +431,7 @@ function renderTournaments() {
     const title = k === "bez-datuma" ? "Bez datuma" : `${MONTHS[+k.slice(5) - 1]} ${k.slice(0, 4)}.`;
     html += `<div class="month"><h2>${esc(title)} · ${list.length}</h2><div class="list">${list.map(card).join("")}</div></div>`;
   }
-  html += `<p class="note">Izvor: <a href="https://chess-results.com/fed.aspx?lan=1&fed=CRO" target="_blank" rel="noopener">chess-results.com – federacija CRO</a>. Podaci se osvježavaju dvaput dnevno. Dodir na turnir otvara njegovu stranicu.</p>`;
+  html += `<p class="note">Izvor: <a href="https://chess-results.com/fed.aspx?lan=1&fed=CRO" target="_blank" rel="noopener">chess-results.com – federacija CRO</a>. Podaci se sami osvježavaju svaki sat od 5 do 22 h, a ↻ Osvježi dohvaća najnovije. Dodir na turnir otvara njegovu stranicu.</p>`;
   el.innerHTML = html;
 }
 
@@ -493,12 +494,22 @@ function renderPlayers() {
   }).join("");
 }
 
+// Automatsko osvježavanje: svaki sat u :17 UTC-sata 4–21 (GitHub ga obično pokrene koju minutu kasnije)
+function nextAuto() {
+  const d = new Date();
+  d.setUTCMinutes(17, 0, 0);
+  if (d <= new Date()) d.setUTCHours(d.getUTCHours() + 1);
+  if (d.getUTCHours() > 21) { d.setUTCDate(d.getUTCDate() + 1); d.setUTCHours(4); }
+  if (d.getUTCHours() < 4) d.setUTCHours(4);
+  return "oko " + d.toLocaleTimeString("hr-HR", { hour: "2-digit", minute: "2-digit" });
+}
+
 function renderSync() {
   const run = state.run;
   const busy = run && run.status !== "completed" && Date.now() - Date.parse(run.created_at) < 20 * 60000;
   let txt;
   if (busy) txt = "Osvježavam…";
-  else if (state.data && state.data.updatedAt) txt = `Osvježeno ${fmtStamp(state.data.updatedAt)}`;
+  else if (state.data && state.data.updatedAt) txt = `Osvježeno ${fmtStamp(state.data.updatedAt)} · sljedeće ${nextAuto()}`;
   else txt = state.error || "";
   if (run && run.status === "completed" && run.conclusion === "failure" && (!state.data || Date.parse(run.created_at) > Date.parse(state.data.updatedAt))) txt += " · zadnje osvježavanje nije uspjelo";
   $("sync").textContent = txt;
@@ -507,7 +518,7 @@ function renderSync() {
 
 function renderSettings() {
   $("repoName").textContent = REPO.name;
-  $("tokState").innerHTML = state.token ? `<span class="ok">Ključ je spremljen.</span>` : "Bez ključa aplikacija samo prikazuje podatke.";
+  $("tokState").innerHTML = state.token ? `<span class="ok">Ključ je spremljen.</span>` : "Bez ključa sve radi osim dodavanja i uklanjanja igrača.";
 }
 
 function renderAll() { renderSync(); renderTournaments(); renderPlayers(); }

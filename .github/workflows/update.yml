@@ -2,7 +2,7 @@ name: Osvježavanje
 
 on:
   schedule:
-    - cron: "0 5,15 * * *"   # 6/7 h i 16/17 h po hrvatskom vremenu
+    - cron: "17 4-21 * * *"   # svaki sat, otprilike od 5 do 22 h po hrvatskom vremenu
   workflow_dispatch:          # gumb ↻ Osvježi u aplikaciji
   push:
     branches: [main]
