@@ -3,7 +3,9 @@ name: Osvježavanje
 on:
   schedule:
     - cron: "17 4-21 * * *"   # svaki sat, otprilike od 5 do 22 h po hrvatskom vremenu
-  workflow_dispatch:          # gumb ↻ Osvježi u aplikaciji
+  workflow_dispatch:
+  issues:
+    types: [opened]           # "Prati: …" / "Ne prati: …" iz aplikacije
   push:
     branches: [main]
     paths:
@@ -15,6 +17,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: osvjezavanje
@@ -22,6 +25,8 @@ concurrency:
 
 jobs:
   update:
+    # Zahtjeve za igrače prihvaća samo vlasnik repozitorija
+    if: github.event_name != 'issues' || github.event.issue.user.login == github.repository_owner
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -33,6 +38,16 @@ jobs:
         with:
           node-version: 22
 
+      - name: Primijeni zahtjev za igrača
+        id: request
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          MSG=$(node scripts/apply-request.mjs)
+          echo "$MSG"
+          echo "msg=$MSG" >> "$GITHUB_OUTPUT"
+
       - name: Skupi turnire i igrače
         run: node scripts/update.mjs
 
@@ -40,7 +55,7 @@ jobs:
         run: |
           git config user.name "sah-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data.json cache/tournaments.json
+          git add docs/data.json docs/players.json cache/tournaments.json
           if git diff --cached --quiet; then echo "Nema promjena."; exit 0; fi
           git commit -m "Osvježeni podaci $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --autostash origin main
@@ -52,3 +67,13 @@ jobs:
           path: docs
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Zatvori zahtjev
+        if: always() && github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MSG: ${{ steps.request.outputs.msg }}
+          OK: ${{ job.status }}
+        run: |
+          if [ "$OK" = "success" ]; then BODY="$MSG"; else BODY="Osvježavanje nije uspjelo, pokušat ću ponovno pri sljedećem satnom osvježavanju."; fi
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }} --comment "$BODY"

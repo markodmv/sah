@@ -16,10 +16,10 @@ async function readJson(path, fallback) {
   try { return JSON.parse(await readFile(path, "utf8")); } catch { return fallback; }
 }
 
-async function get(url) {
+async function get(url, extraHeaders = {}) {
   for (let i = 0; i < 3; i++) {
     try {
-      const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "en" }, redirect: "follow" });
+      const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "en", ...extraHeaders }, redirect: "follow" });
       if (res.ok) { await sleep(DELAY_MS); return await res.text(); }
       console.warn(`HTTP ${res.status} ${url}`);
     } catch (e) { console.warn(`Greška ${url}: ${e.message}`); }
@@ -147,6 +147,29 @@ function parseFide(html) {
   };
 }
 
+// FIDE pretraga po imenu: traži po svakoj riječi imena, prihvaća samo jednoznačan pogodak (prednost CRO)
+async function findFideId(fullName) {
+  const want = nameKey(fullName);
+  // FIDE imena su bez dijakritika; prezime je obično zadnja riječ
+  const words = norm(fullName).replace(/[^a-z\s-]/g, "").trim().split(/\s+/).filter((w) => w.length > 1).reverse();
+  for (const w of words) {
+    const html = await get(`https://ratings.fide.com/incl_search_l.php?search=${encodeURIComponent(w)}&simple=1`,
+      { "X-Requested-With": "XMLHttpRequest", Referer: "https://ratings.fide.com/" });
+    if (!html) continue;
+    const hits = [];
+    for (const row of html.replace(/\s+/g, " ").split("<tr").slice(1)) {
+      const m = row.match(/profile\/(\d+) class="found_name">([^<]+)</);
+      const fed = row.match(/alt="([A-Z]{3})"/);
+      if (m && nameKey(text(m[2])) === want) hits.push({ id: +m[1], fed: fed ? fed[1] : null });
+    }
+    const cro = hits.filter((h) => h.fed === "CRO");
+    if (cro.length === 1) return cro[0].id;
+    if (!cro.length && hits.length === 1) return hits[0].id;
+    if (hits.length) return null;   // više igrača istog imena: ne pogađaj
+  }
+  return null;
+}
+
 // ---------- glavni tok ----------
 
 const prev = await readJson("docs/data.json", { tournaments: [], players: [] });
@@ -184,6 +207,8 @@ for (const p of tracked) {
       const hit = (t.entrants || []).find((e) => e.f && nameKey(e.n) === pk);
       if (hit) { fideId = hit.f; break; }
     }
+    if (!fideId && old.fideId) fideId = old.fideId;
+    if (!fideId) fideId = await findFideId(p.name);
   }
 
   let info = null;
@@ -226,7 +251,7 @@ for (const p of tracked) {
     federation: info?.federation ?? old.federation ?? null,
     ratings, deltas,
     upcoming, recent: recent.slice(0, 8),
-    note: fideId ? null : "FIDE ID nije pronađen. Dodaj ga ručno ako igrač ima FIDE rejting.",
+    note: fideId ? null : "FIDE ID nije pronađen ili ima više igrača s tim imenom. Ukloni igrača i dodaj ga ponovno s FIDE ID-om.",
   });
 }
 
