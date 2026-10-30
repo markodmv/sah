@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-30T14:52:29.466Z",
+ "updatedAt": "2026-10-30T14:55:52.670Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -784,24 +784,6 @@
    ],
    "recent": [],
    "note": null
-  },
-  {
-   "key": "marko vasek",
-   "name": "Marko Vašek",
-   "fideId": null,
-   "foundFideId": false,
-   "title": null,
-   "birthYear": null,
-   "federation": null,
-   "ratings": {
-    "std": null,
-    "rapid": null,
-    "blitz": null
-   },
-   "deltas": {},
-   "upcoming": [],
-   "recent": [],
-   "note": "FIDE ID nije pronađen ili ima više igrača s tim imenom. Ukloni igrača i dodaj ga ponovno s FIDE ID-om."
   }
  ]
 }
