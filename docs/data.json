@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-30T19:56:39.056Z",
+ "updatedAt": "2026-10-30T23:45:04.626Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -230,6 +230,21 @@
    "kind": "rapid",
    "groups": [
     "skole"
+   ]
+  },
+  {
+   "tnr": 1531363,
+   "name": "Ekipno prvenstvo mladih kadeta Zagrebačke županije u šahu za 2026",
+   "url": "https://chess-results.com/tnr1531363.aspx?lan=1",
+   "organizer": "ŠK Jakovlje i ŠSZŽ",
+   "place": "Jakovlje, ulica Adele Sixta 2",
+   "from": "2026-10-30",
+   "to": "2026-10-30",
+   "rounds": 5,
+   "tc": "15'",
+   "kind": "rapid",
+   "groups": [
+    "kadeti"
    ]
   },
   {
