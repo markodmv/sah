@@ -1,7 +1,22 @@
 {
- "updatedAt": "2026-10-31T16:05:15.221Z",
+ "updatedAt": "2026-10-31T19:58:52.503Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
+  {
+   "tnr": 1356676,
+   "name": "3. Hšl - jug - seniori 2026",
+   "url": "https://chess-results.com/tnr1356676.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": null,
+   "from": "2026-03-07",
+   "to": "2026-10-31",
+   "rounds": 9,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
   {
    "tnr": 1529048,
    "name": "Berba maslina u Travnom - brzopotezni turnir ŠK Travno",
