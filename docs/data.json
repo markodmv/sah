@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-31T19:58:52.503Z",
+ "updatedAt": "2026-10-31T23:22:16.199Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -11,6 +11,36 @@
    "from": "2026-03-07",
    "to": "2026-10-31",
    "rounds": 9,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338516,
+   "name": "Četvrta \"B\" Hšl Šzži 2026.",
+   "url": "https://chess-results.com/tnr1338516.aspx?lan=1",
+   "organizer": "HRVATSKI ŠAHOVSKI SAVEZ",
+   "place": "Višnjevac,Valpovo,Đakovo,Bizovac,Velimirovac,Petrijevci,Vučevci,Strizivojna..",
+   "from": "2026-03-08",
+   "to": "2026-11-15",
+   "rounds": 11,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338522,
+   "name": "Četvrta \"C\" Hšl Šzži 2026.",
+   "url": "https://chess-results.com/tnr1338522.aspx?lan=1",
+   "organizer": "HRVATSKI ŠAHOVSKI SAVEZ",
+   "place": "Garčin,Velika Kopanica,Čaglin,Pitomača,Gornji Bogićevci,Kutjevo,Nova Gradiška..",
+   "from": "2026-03-08",
+   "to": "2026-11-15",
+   "rounds": 11,
    "tc": "90'+30\"",
    "kind": "standard",
    "groups": [
@@ -844,6 +874,81 @@
    "rounds": 9,
    "tc": "90'+30\"",
    "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338455,
+   "name": "Druga Hšl Šzži 2026. - Poredak",
+   "url": "https://chess-results.com/tnr1338455.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338457,
+   "name": "Treća \"A\" Hšl Šzži 2026.",
+   "url": "https://chess-results.com/tnr1338457.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338480,
+   "name": "Treća \"B\" Hšl Šzži 2026.",
+   "url": "https://chess-results.com/tnr1338480.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338493,
+   "name": "Treća \"C\" Hšl Šzži 2026.",
+   "url": "https://chess-results.com/tnr1338493.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1338511,
+   "name": "Četvrta \"A\" Hšl Šzži 2026.",
+   "url": "https://chess-results.com/tnr1338511.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
    "groups": [
     "open"
    ]
