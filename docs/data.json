@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-31T10:22:37.539Z",
+ "updatedAt": "2026-10-31T16:05:15.221Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -185,6 +185,36 @@
    "kind": "blitz",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1531975,
+   "name": "Prvenstvo Ekipa Osnovnih Škola Velike Gorice 2026/2027-učenici",
+   "url": "https://chess-results.com/tnr1531975.aspx?lan=1",
+   "organizer": "OŠ VUKOVINA",
+   "place": "Buševec",
+   "from": "2026-10-29",
+   "to": "2026-10-29",
+   "rounds": 5,
+   "tc": "12'+3\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1531976,
+   "name": "Prvenstvo Ekipa Osnovnih Škola Velike Gorice 2026/2027-učenice",
+   "url": "https://chess-results.com/tnr1531976.aspx?lan=1",
+   "organizer": "OŠ VUKOVINA",
+   "place": "Buševec",
+   "from": "2026-10-29",
+   "to": "2026-10-29",
+   "rounds": 3,
+   "tc": "12'+3\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
    ]
   },
   {
@@ -564,6 +594,21 @@
    ]
   },
   {
+   "tnr": 1486749,
+   "name": "Dan Sjećanja Na Žrtve Domovinskog Rata, nedjelja 15.11. u 10 sati - FIDE Rapid rejting, Zagreb, MO Janko Matko",
+   "url": "https://chess-results.com/tnr1486749.aspx?lan=1",
+   "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
+   "place": "Zagreb, MO Janko Matko",
+   "from": "2026-11-15",
+   "to": "2026-11-15",
+   "rounds": 7,
+   "tc": "12'+3\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1486757,
    "name": "Dan Sjećanja Na Žrtve Domovinskog Rata, Rapis, nedjelja 15.11.2026. u 10h",
    "url": "https://chess-results.com/tnr1486757.aspx?lan=1",
@@ -621,6 +666,21 @@
    "kind": "rapid",
    "groups": [
     "zene"
+   ]
+  },
+  {
+   "tnr": 1495670,
+   "name": "Zagreb Advent U1800 Standard subota i nedjelja 5-6.12.2026.",
+   "url": "https://chess-results.com/tnr1495670.aspx?lan=1",
+   "organizer": "ŠK Aer, Partneri za šah",
+   "place": "Zagreb, MO Janko Matko",
+   "from": "2026-12-05",
+   "to": "2026-12-06",
+   "rounds": 6,
+   "tc": "30'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
    ]
   },
   {
@@ -784,11 +844,14 @@
    "birthYear": 2016,
    "federation": "Croatia",
    "ratings": {
-    "std": 1441,
-    "rapid": 1570,
+    "std": 1431,
+    "rapid": 1522,
     "blitz": 1514
    },
-   "deltas": {},
+   "deltas": {
+    "std": -10,
+    "rapid": -48
+   },
    "upcoming": [
     {
      "tnr": 1507981,
