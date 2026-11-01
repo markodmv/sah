@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-01T17:08:44.012Z",
+ "updatedAt": "2026-11-01T21:12:00.063Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -353,6 +353,21 @@
    ]
   },
   {
+   "tnr": 1532852,
+   "name": "29.Bozicni rejting Fid-e turnir 3.11.-7.12.2026.ŠK Ruscica",
+   "url": "https://chess-results.com/tnr1532852.aspx?lan=1",
+   "organizer": "Šahovski klub Ruščica",
+   "place": "Ivane Brlić Mažuranić 3. 35208 Ruščica",
+   "from": "2026-11-03",
+   "to": "2026-12-07",
+   "rounds": 7,
+   "tc": "60'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1507981,
    "name": "Otvoreno prvenstvo OBŽ-a u ubrzanom šahu",
    "url": "https://chess-results.com/tnr1507981.aspx?lan=1",
@@ -679,6 +694,21 @@
    "rounds": 12,
    "tc": "5'+3\"",
    "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1532876,
+   "name": "Sveti Mauro 2026 Poreč",
+   "url": "https://chess-results.com/tnr1532876.aspx?lan=1",
+   "organizer": "Šahovski klub \" Vladimir Gortan \" Poreč",
+   "place": "Obrtnički dom Poreč, Partizanska 5a",
+   "from": "2026-11-15",
+   "to": "2026-11-15",
+   "rounds": 7,
+   "tc": "8'+4\"",
+   "kind": "rapid",
    "groups": [
     "open"
    ]
