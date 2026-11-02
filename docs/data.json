@@ -1,7 +1,22 @@
 {
- "updatedAt": "2026-11-02T00:41:44.260Z",
+ "updatedAt": "2026-11-02T12:21:15.698Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
+  {
+   "tnr": 1358547,
+   "name": "2. Hrvatska šahovska liga jug - kadeti 2026",
+   "url": "https://chess-results.com/tnr1358547.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": null,
+   "from": "2026-01-01",
+   "to": "2026-11-10",
+   "rounds": 11,
+   "tc": "30'+30\"",
+   "kind": "standard",
+   "groups": [
+    "kadeti"
+   ]
+  },
   {
    "tnr": 1356676,
    "name": "3. Hšl - jug - seniori 2026",
@@ -41,6 +56,21 @@
    "from": "2026-03-08",
    "to": "2026-11-15",
    "rounds": 11,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1356710,
+   "name": "4. Hšl - jug - seniori 2026",
+   "url": "https://chess-results.com/tnr1356710.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": null,
+   "from": "2026-03-14",
+   "to": "2026-11-07",
+   "rounds": 9,
    "tc": "90'+30\"",
    "kind": "standard",
    "groups": [
@@ -606,6 +636,36 @@
    "kind": "rapid",
    "groups": [
     "U18"
+   ]
+  },
+  {
+   "tnr": 1533117,
+   "name": "Pojedinačno seniorsko prvenstvo Zagreba 2026.",
+   "url": "https://chess-results.com/tnr1533117.aspx?lan=1",
+   "organizer": "Zagrebački šahovski savez",
+   "place": null,
+   "from": "2026-11-09",
+   "to": "2026-11-17",
+   "rounds": 7,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1522752,
+   "name": "Šah. turnir Vukovar 1991. 2026. u petak 13. 11. 2026. u 18.00 h u Sesvetama",
+   "url": "https://chess-results.com/tnr1522752.aspx?lan=1",
+   "organizer": "UVVD i ŠK Sesvete Agroproteinka",
+   "place": "Sesvete, Kelekova 2",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
    ]
   },
   {
