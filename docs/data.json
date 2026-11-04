@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-03T19:30:06.437Z",
+ "updatedAt": "2026-11-04T00:37:42.555Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -760,6 +760,68 @@
    "kind": "standard",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1512880,
+   "name": "Ekipno prvenstvo Šsd OŠ Vsž 2026./2027. dječaci, Štitar, 13.11.2026.",
+   "url": "https://chess-results.com/tnr1512880.aspx?lan=1",
+   "organizer": "Savez ŠSD VSŽ",
+   "place": "Štitar, Dom kulture, J.J. Strossmayera 36",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 5,
+   "tc": "20'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1512881,
+   "name": "Ekipno prvenstvo Šsd OŠ Vsž 2026./2027. djevojčice, Štitar, 13.11.2026.",
+   "url": "https://chess-results.com/tnr1512881.aspx?lan=1",
+   "organizer": "Savez ŠSD VSŽ",
+   "place": "Štitar, Dom kulture, J.J. Strossmayera 36",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 7,
+   "tc": "20'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1512882,
+   "name": "Ekipno prvenstvo Šsd SŠ Vsž 2026./2027. djevojke, Štitar, 13.11.2026.",
+   "url": "https://chess-results.com/tnr1512882.aspx?lan=1",
+   "organizer": "Savez ŠSD VSŽ",
+   "place": "Štitar, Dom kulture, J.J. Strossmayera 36",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 3,
+   "tc": "20'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1512883,
+   "name": "Ekipno prvenstvo Šsd SŠ Vsž 2026./2027. mladići, Štitar, 13.11.2026.",
+   "url": "https://chess-results.com/tnr1512883.aspx?lan=1",
+   "organizer": "Savez ŠSD VSŽ",
+   "place": "Štitar, Dom kulture, J.J. Strossmayera 36",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 5,
+   "tc": "20'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
    ]
   },
   {
