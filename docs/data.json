@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-04T12:06:20.422Z",
+ "updatedAt": "2026-11-04T19:45:12.580Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -490,6 +490,66 @@
    ]
   },
   {
+   "tnr": 1534354,
+   "name": "Prvenstvo SŠ Smž M 2026",
+   "url": "https://chess-results.com/tnr1534354.aspx?lan=1",
+   "organizer": "SAVEZ ŠKOLSKIH SPORTSKIH KLUBOVA SMŽ",
+   "place": "POPOVAĆA",
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 9,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1534355,
+   "name": "Prvenstvo SŠ Smž Ž 2026",
+   "url": "https://chess-results.com/tnr1534355.aspx?lan=1",
+   "organizer": "šKOLSKI ŠPORTSKI SAVEZ SMŽ",
+   "place": "POPOVAČA",
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 5,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1534356,
+   "name": "Prvenstvo OŠ Smž M 2026",
+   "url": "https://chess-results.com/tnr1534356.aspx?lan=1",
+   "organizer": "SVEZ ŠKOLSKIH ŠPORTSKIH KLUBOVA SMŽ",
+   "place": null,
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1534357,
+   "name": "Prvenstvo OŠ Smž Ž 2026",
+   "url": "https://chess-results.com/tnr1534357.aspx?lan=1",
+   "organizer": "SAVEZ ŠKOLSKIH ŠPORTSKIH KLUBOVA SMŽ",
+   "place": "POPOVAČA",
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 3,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
    "tnr": 1533290,
    "name": "Županijsko šahovsko natjecanje SŠ Vpž 2026. - djevojke",
    "url": "https://chess-results.com/tnr1533290.aspx?lan=1",
@@ -733,6 +793,22 @@
    ]
   },
   {
+   "tnr": 1522410,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž10",
+   "url": "https://chess-results.com/tnr1522410.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": null,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U10",
+    "zene"
+   ]
+  },
+  {
    "tnr": 1522414,
    "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M12",
    "url": "https://chess-results.com/tnr1522414.aspx?lan=1",
@@ -748,6 +824,22 @@
    ]
   },
   {
+   "tnr": 1522415,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž12",
+   "url": "https://chess-results.com/tnr1522415.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": null,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U12",
+    "zene"
+   ]
+  },
+  {
    "tnr": 1522487,
    "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M14",
    "url": "https://chess-results.com/tnr1522487.aspx?lan=1",
@@ -760,6 +852,22 @@
    "kind": "rapid",
    "groups": [
     "U14"
+   ]
+  },
+  {
+   "tnr": 1522492,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž14",
+   "url": "https://chess-results.com/tnr1522492.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": null,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U14",
+    "zene"
    ]
   },
   {
@@ -806,6 +914,22 @@
    "kind": "rapid",
    "groups": [
     "U18"
+   ]
+  },
+  {
+   "tnr": 1522502,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž18",
+   "url": "https://chess-results.com/tnr1522502.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": null,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U18",
+    "zene"
    ]
   },
   {
@@ -896,6 +1020,21 @@
    "rounds": 9,
    "tc": "5'+3\"",
    "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534446,
+   "name": "II. Hrvatska Šahovska Liga Za Seniorke",
+   "url": "https://chess-results.com/tnr1534446.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Hotel Paris, Opatija, Ul. Vladimira Nazora 1",
+   "from": "2026-11-13",
+   "to": "2026-11-15",
+   "rounds": 5,
+   "tc": "90'+30\"",
+   "kind": "standard",
    "groups": [
     "open"
    ]
@@ -1166,6 +1305,21 @@
    "rounds": 9,
    "tc": "90'",
    "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534348,
+   "name": "7. Međunarodni turnir memorijal \"Franjo Zečević\" 2027. Drenovci 17.01.2027",
+   "url": "https://chess-results.com/tnr1534348.aspx?lan=1",
+   "organizer": "ŠK \"Drenovci\" Drenovci",
+   "place": "Dom kulture, Toljani 1, Drenovci",
+   "from": "2027-01-17",
+   "to": "2027-01-17",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
    "groups": [
     "open"
    ]
