@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-04T00:37:42.555Z",
+ "updatedAt": "2026-11-04T12:06:20.422Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -426,6 +426,67 @@
    "kind": "standard",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1534065,
+   "name": "Županijsko prvenstvo Šsd OŠ Koprivničko-križevačke županije - učenici",
+   "url": "https://chess-results.com/tnr1534065.aspx?lan=1",
+   "organizer": "Školski-športski savez Koprivničko-križevačke županije",
+   "place": "Sveti Ivan Žabno",
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 5,
+   "tc": "15'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1534066,
+   "name": "Županijsko prvenstvo Šsd OŠ Koprivničko-križevačke županije - učenice",
+   "url": "https://chess-results.com/tnr1534066.aspx?lan=1",
+   "organizer": "Školski-športski savez Koprivničko-križevačke županije",
+   "place": "Sveti Ivan Žabno",
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 5,
+   "tc": "15'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1534165,
+   "name": "Ekipno prvenstvo školskih sportskih društava I.Ž 2026. djevojke, Poreč",
+   "url": "https://chess-results.com/tnr1534165.aspx?lan=1",
+   "organizer": "Školski sportski savez Istarske županije",
+   "place": null,
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 3,
+   "tc": "15'",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1534167,
+   "name": "Županijsko prvenstvo školskih društava srednjih škola, Poreč 2026",
+   "url": "https://chess-results.com/tnr1534167.aspx?lan=1",
+   "organizer": "Školski sportski savez Istarske županije",
+   "place": "Poreč, Sportska dvorana Žatika",
+   "from": "2026-11-04",
+   "to": "2026-11-04",
+   "rounds": 5,
+   "tc": "15'",
+   "kind": "rapid",
+   "groups": [
+    "skole"
    ]
   },
   {
@@ -945,6 +1006,21 @@
    ]
   },
   {
+   "tnr": 1534199,
+   "name": "Trening turnir ŠK Novi Zagreb No.21",
+   "url": "https://chess-results.com/tnr1534199.aspx?lan=1",
+   "organizer": "ŠK Novi Zagreb",
+   "place": "OŠ Lovre Matačića, Laurenčićeva 1, Zagreb",
+   "from": "2026-11-15",
+   "to": "2026-11-15",
+   "rounds": 7,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1504571,
    "name": "II. Memorijalni šahovski turnir \"Vebi Abazi\", 22.11.2026., Ploče",
    "url": "https://chess-results.com/tnr1504571.aspx?lan=1",
@@ -1089,6 +1165,81 @@
    "to": "2027-01-09",
    "rounds": 9,
    "tc": "90'",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534200,
+   "name": "New Zagreb Classic 2027 - Open E",
+   "url": "https://chess-results.com/tnr1534200.aspx?lan=1",
+   "organizer": "ŠK Novi Zagreb, https://www.sknovizagreb.hr/",
+   "place": "Zagreb, hotel Sheraton, Kneza Borne 2",
+   "from": "2027-02-05",
+   "to": "2027-02-07",
+   "rounds": 5,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534201,
+   "name": "New Zagreb Classic 2027 - Open D",
+   "url": "https://chess-results.com/tnr1534201.aspx?lan=1",
+   "organizer": "ŠK Novi Zagreb, https://www.sknovizagreb.hr/",
+   "place": "Zagreb, hotel Sheraton, Kneza Borne 2",
+   "from": "2027-02-05",
+   "to": "2027-02-07",
+   "rounds": 5,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534202,
+   "name": "New Zagreb Classic 2027 - Open C",
+   "url": "https://chess-results.com/tnr1534202.aspx?lan=1",
+   "organizer": "ŠK Novi Zagreb, https://www.sknovizagreb.hr/",
+   "place": "Zagreb, hotel Sheraton, Kneza Borne 2",
+   "from": "2027-02-05",
+   "to": "2027-02-07",
+   "rounds": 5,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534203,
+   "name": "New Zagreb Classic 2027 - Open B",
+   "url": "https://chess-results.com/tnr1534203.aspx?lan=1",
+   "organizer": "ŠK Novi Zagreb, https://www.sknovizagreb.hr/",
+   "place": "Zagreb, hotel Sheraton, Kneza Borne 2",
+   "from": "2027-02-05",
+   "to": "2027-02-07",
+   "rounds": 5,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1534204,
+   "name": "New Zagreb Classic 2027 - Open A",
+   "url": "https://chess-results.com/tnr1534204.aspx?lan=1",
+   "organizer": "ŠK Novi Zagreb, https://www.sknovizagreb.hr/",
+   "place": "Zagreb, hotel Sheraton, Kneza Borne 2",
+   "from": "2027-02-05",
+   "to": "2027-02-07",
+   "rounds": 5,
+   "tc": "90'+30\"",
    "kind": "standard",
    "groups": [
     "open"
