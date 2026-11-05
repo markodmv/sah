@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-04T19:45:12.580Z",
+ "updatedAt": "2026-11-05T00:55:09.476Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -15,6 +15,21 @@
    "kind": "standard",
    "groups": [
     "kadeti"
+   ]
+  },
+  {
+   "tnr": 1358580,
+   "name": "2. Hrvatska šahovska liga jug - juniori 2026",
+   "url": "https://chess-results.com/tnr1358580.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Zadar, Hotel Kolovare",
+   "from": "2026-01-01",
+   "to": "2026-12-01",
+   "rounds": 5,
+   "tc": "60'+30\"",
+   "kind": "standard",
+   "groups": [
+    "mladi"
    ]
   },
   {
