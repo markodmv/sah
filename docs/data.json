@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-05T12:17:02.701Z",
+ "updatedAt": "2026-11-05T19:59:26.317Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -627,6 +627,21 @@
    ]
   },
   {
+   "tnr": 1535047,
+   "name": "Brzopotezni turnir ŠK Rijeka -10 /16 jesen- 2026",
+   "url": "https://chess-results.com/tnr1535047.aspx?lan=1",
+   "organizer": "Chess Club Rijeka",
+   "place": "Rijeka, Šahovski dom, Blaža Polića 2/2",
+   "from": "2026-11-05",
+   "to": "2026-11-05",
+   "rounds": 13,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1507981,
    "name": "Otvoreno prvenstvo OBŽ-a u ubrzanom šahu",
    "url": "https://chess-results.com/tnr1507981.aspx?lan=1",
@@ -703,7 +718,7 @@
   },
   {
    "tnr": 1451209,
-   "name": "Međugradski memorijal Nenad Petrović - Hrvoje Bartolović, nedjelja 8.11. u 10:30 - simultano u gradovima",
+   "name": "Memorijalni turnir Nenad Petrović - Hrvoje Bartolović, nedjelja 8.11. u 10:30 Zagreb, MO Janko Matko, Franje Horvata Kiša 12",
    "url": "https://chess-results.com/tnr1451209.aspx?lan=1",
    "organizer": "ŠK Aer, Partneri za problemski šah",
    "place": "Zagreb, Dubrovnik, Split",
