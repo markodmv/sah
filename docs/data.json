@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-05T19:59:26.317Z",
+ "updatedAt": "2026-11-06T00:58:51.439Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -1592,6 +1592,21 @@
    "kind": null,
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1357376,
+   "name": "1. Hrvatska šahovska liga jug - kadeti 2026",
+   "url": "https://chess-results.com/tnr1357376.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "kadeti"
    ]
   }
  ],
