@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T00:58:51.439Z",
+ "updatedAt": "2026-11-06T12:05:39.881Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -415,7 +415,7 @@
   },
   {
    "tnr": 1496217,
-   "name": "29.Božićni rejting Fid-e turnir 3.11.-7.12.2026. ŠK Ruščica",
+   "name": "29.Božićni rejting FIDE turnir 3.11.-7.12.2026. ŠK Ruščica",
    "url": "https://chess-results.com/tnr1496217.aspx?lan=1",
    "organizer": "Šahovski klub Ruščica",
    "place": "Ivane Brlić Mažuranić 3. 35208 Ruščica",
@@ -781,7 +781,7 @@
    "name": "Turnir Blitz Visoko 2026",
    "url": "https://chess-results.com/tnr1520871.aspx?lan=1",
    "organizer": "ŠK Visoko",
-   "place": null,
+   "place": "Visoko, Visoko 20",
    "from": "2026-11-08",
    "to": "2026-11-08",
    "rounds": 9,
