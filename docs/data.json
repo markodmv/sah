@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T12:05:39.881Z",
+ "updatedAt": "2026-11-06T19:23:05.554Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -430,7 +430,7 @@
   },
   {
    "tnr": 1532852,
-   "name": "29.Bozicni rejting Fid-e turnir 3.11.-7.12.2026.ŠK Ruscica",
+   "name": "29.Bozicni rejting FIDE turnir 3.11.-7.12.2026.ŠK Ruscica",
    "url": "https://chess-results.com/tnr1532852.aspx?lan=1",
    "organizer": "Šahovski klub Ruščica",
    "place": "Ivane Brlić Mažuranić 3. 35208 Ruščica",
@@ -642,6 +642,21 @@
    ]
   },
   {
+   "tnr": 1535822,
+   "name": "Pojedinačno prvenstvo Hrvatske za slijepe i slabovidne 2026 - ubrzano",
+   "url": "https://chess-results.com/tnr1535822.aspx?lan=1",
+   "organizer": "Hrvatski športski savez slijepih",
+   "place": "Zagreb, hotel Novi Zagreb, ul. Ive Robića 2",
+   "from": "2026-11-06",
+   "to": "2026-11-08",
+   "rounds": 7,
+   "tc": "45'",
+   "kind": "rapid",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1507981,
    "name": "Otvoreno prvenstvo OBŽ-a u ubrzanom šahu",
    "url": "https://chess-results.com/tnr1507981.aspx?lan=1",
@@ -703,7 +718,7 @@
   },
   {
    "tnr": 1525845,
-   "name": "Memorijalni Turnir Aleksandar Vukić 2026. - subota 7.11. od 15,45 h - FIDE Blitz rating, Mjesni odbor Janko Matko u Zagrebu, max.35 igrača",
+   "name": "Memorijalni Turnir Aleksandar Vukić 2026. - subota 7.11. od 15,45 h - FIDE Blitz rating, Mjesni odbor Janko Matko u Zagrebu, max.41 igrač",
    "url": "https://chess-results.com/tnr1525845.aspx?lan=1",
    "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
    "place": "Zagreb, Mjesni odbor Janko Matko",
@@ -714,6 +729,36 @@
    "kind": "blitz",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1535804,
+   "name": "Mjesecni Kadetski I Juniorski Sahovski Turnir S.K.Rijeka 09/2026 - A turnir",
+   "url": "https://chess-results.com/tnr1535804.aspx?lan=1",
+   "organizer": "Chess Club Rijeka",
+   "place": "Rijeka, Šahovski dom, Blaža Polića 2/2",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "kadeti"
+   ]
+  },
+  {
+   "tnr": 1535805,
+   "name": "Mjesecni Kadetski Sahovski Turnir S.K.Rijeka 09/2026 - B turnir",
+   "url": "https://chess-results.com/tnr1535805.aspx?lan=1",
+   "organizer": "Chess Club Rijeka",
+   "place": "Rijeka, Šahovski dom, Blaža Polića 2/2",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "kadeti"
    ]
   },
   {
