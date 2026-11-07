@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T16:51:21.817Z",
+ "updatedAt": "2026-11-07T20:52:40.210Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -679,7 +679,7 @@
    "place": "SISAK",
    "from": "2026-11-07",
    "to": "2026-11-07",
-   "rounds": 9,
+   "rounds": 7,
    "tc": "15'+5\"",
    "kind": "rapid",
    "groups": [
@@ -771,6 +771,21 @@
    "to": "2026-11-07",
    "rounds": 7,
    "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1537118,
+   "name": "Brzopotezni turniri ŠK Bruno Fuzul Bibinje za 2026. godinu",
+   "url": "https://chess-results.com/tnr1537118.aspx?lan=1",
+   "organizer": "ŠK Bruno Fuzul Bibinje",
+   "place": "Bibinje",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 7,
+   "tc": "3'+2\"",
    "kind": "blitz",
    "groups": [
     "open"
@@ -1440,6 +1455,21 @@
    "rounds": 7,
    "tc": "60'",
    "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1537121,
+   "name": "Tradicionalni božićni šahovski turnir u Varaždinskim Toplicama, 26.12.2026.",
+   "url": "https://chess-results.com/tnr1537121.aspx?lan=1",
+   "organizer": "ŠŠK “MLADOST” Varaždinske Toplice",
+   "place": "Varaždinske Toplice",
+   "from": "2026-12-26",
+   "to": "2026-12-26",
+   "rounds": 9,
+   "tc": "10'",
+   "kind": "blitz",
    "groups": [
     "open"
    ]
