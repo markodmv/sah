@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T00:07:55.907Z",
+ "updatedAt": "2026-11-07T11:02:44.661Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -759,6 +759,21 @@
    "kind": "rapid",
    "groups": [
     "kadeti"
+   ]
+  },
+  {
+   "tnr": 1536497,
+   "name": "Prvenstvo gluhih muškarce 2026",
+   "url": "https://chess-results.com/tnr1536497.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez gluhih",
+   "place": "Vijenac ivana Meštrovića 26b , Osijek",
+   "from": "2026-11-07",
+   "to": "2026-11-07",
+   "rounds": 7,
+   "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
    ]
   },
   {
@@ -1652,6 +1667,21 @@
    "kind": null,
    "groups": [
     "kadeti"
+   ]
+  },
+  {
+   "tnr": 1536501,
+   "name": "Prvenstvo gluhih žene 2025",
+   "url": "https://chess-results.com/tnr1536501.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "zene"
    ]
   }
  ],
