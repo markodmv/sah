@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T11:02:44.661Z",
+ "updatedAt": "2026-11-07T16:51:21.817Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -718,7 +718,7 @@
   },
   {
    "tnr": 1525845,
-   "name": "Memorijalni Turnir Aleksandar Vukić 2026. - subota 7.11. u 15,45 h - MO Janko Matko, Zagreb",
+   "name": "Memorijalni Turnir Aleksandar Vukić 2026.",
    "url": "https://chess-results.com/tnr1525845.aspx?lan=1",
    "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
    "place": "Zagreb, Mjesni odbor Janko Matko, Ulica Franje Horvata Kiša 12",
@@ -905,7 +905,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": 7,
+   "rounds": 6,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -936,7 +936,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": 7,
+   "rounds": 6,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -951,7 +951,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 6,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -967,7 +967,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": 7,
+   "rounds": null,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -998,7 +998,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": 7,
+   "rounds": null,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -1307,6 +1307,36 @@
    "kind": "rapid",
    "groups": [
     "zene"
+   ]
+  },
+  {
+   "tnr": 1536817,
+   "name": "Pojedinačno prvenstvo ŠK Travno",
+   "url": "https://chess-results.com/tnr1536817.aspx?lan=1",
+   "organizer": "ŠK Travno",
+   "place": "Zagreb",
+   "from": "2026-12-04",
+   "to": "2026-12-15",
+   "rounds": 7,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1536866,
+   "name": "Pojedinačno prvenstvo ŠK Travno 2026",
+   "url": "https://chess-results.com/tnr1536866.aspx?lan=1",
+   "organizer": "ŠK Travno",
+   "place": null,
+   "from": "2026-12-04",
+   "to": "2026-12-15",
+   "rounds": 7,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
    ]
   },
   {
@@ -1671,7 +1701,7 @@
   },
   {
    "tnr": 1536501,
-   "name": "Prvenstvo gluhih žene 2025",
+   "name": "Prvenstvo gluhih žene 2026",
    "url": "https://chess-results.com/tnr1536501.aspx?lan=1",
    "organizer": null,
    "place": null,
