@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T19:23:05.554Z",
+ "updatedAt": "2026-11-07T00:07:55.907Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -430,7 +430,7 @@
   },
   {
    "tnr": 1532852,
-   "name": "29.Bozicni rejting FIDE turnir 3.11.-7.12.2026.ŠK Ruscica",
+   "name": "29.Bozicni rejting Fid-e turnir 3.11.-7.12.2026.ŠK Ruscica",
    "url": "https://chess-results.com/tnr1532852.aspx?lan=1",
    "organizer": "Šahovski klub Ruščica",
    "place": "Ivane Brlić Mažuranić 3. 35208 Ruščica",
@@ -718,10 +718,10 @@
   },
   {
    "tnr": 1525845,
-   "name": "Memorijalni Turnir Aleksandar Vukić 2026. - subota 7.11. od 15,45 h - FIDE Blitz rating, Mjesni odbor Janko Matko u Zagrebu, max.41 igrač",
+   "name": "Memorijalni Turnir Aleksandar Vukić 2026. - subota 7.11. u 15,45 h - MO Janko Matko, Zagreb",
    "url": "https://chess-results.com/tnr1525845.aspx?lan=1",
    "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
-   "place": "Zagreb, Mjesni odbor Janko Matko",
+   "place": "Zagreb, Mjesni odbor Janko Matko, Ulica Franje Horvata Kiša 12",
    "from": "2026-11-07",
    "to": "2026-11-07",
    "rounds": 9,
