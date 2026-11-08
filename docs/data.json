@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T11:16:32.969Z",
+ "updatedAt": "2026-11-08T17:05:59.234Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -642,22 +642,6 @@
    ]
   },
   {
-   "tnr": 1522497,
-   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž16",
-   "url": "https://chess-results.com/tnr1522497.aspx?lan=1",
-   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
-   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
-   "from": "2026-11-06",
-   "to": "2026-11-06",
-   "rounds": 6,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "U16",
-    "zene"
-   ]
-  },
-  {
    "tnr": 1535822,
    "name": "Pojedinačno prvenstvo Hrvatske za slijepe i slabovidne 2026 - ubrzano",
    "url": "https://chess-results.com/tnr1535822.aspx?lan=1",
@@ -1037,6 +1021,22 @@
    ]
   },
   {
+   "tnr": 1522497,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž16",
+   "url": "https://chess-results.com/tnr1522497.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-08",
+   "to": "2026-11-08",
+   "rounds": 6,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U16",
+    "zene"
+   ]
+  },
+  {
    "tnr": 1522501,
    "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -M18",
    "url": "https://chess-results.com/tnr1522501.aspx?lan=1",
@@ -1068,6 +1068,36 @@
    ]
   },
   {
+   "tnr": 1537627,
+   "name": "Kvalifikacije za 3.A ligu Šzž Centar 2027.",
+   "url": "https://chess-results.com/tnr1537627.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Jasenovac, Donja Stubica",
+   "from": "2026-11-08",
+   "to": "2026-11-15",
+   "rounds": 2,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1537631,
+   "name": "Kvalifikacije za 2. ligu Šzž Centar 2027.",
+   "url": "https://chess-results.com/tnr1537631.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Grubišno Polje, Strahoninec",
+   "from": "2026-11-08",
+   "to": "2026-11-15",
+   "rounds": 2,
+   "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1533117,
    "name": "Pojedinačno seniorsko prvenstvo Zagreba 2026.",
    "url": "https://chess-results.com/tnr1533117.aspx?lan=1",
@@ -1077,6 +1107,21 @@
    "to": "2026-11-17",
    "rounds": 7,
    "tc": "90'+30\"",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1537707,
+   "name": "Turnir mira - Tournament of Peace 2026.",
+   "url": "https://chess-results.com/tnr1537707.aspx?lan=1",
+   "organizer": "ZŠS pod pokroviteljstvom Grada Zagreba",
+   "place": "Zagreb, Hotel Aristos, Cebini ul. 33",
+   "from": "2026-11-11",
+   "to": "2026-11-19",
+   "rounds": null,
+   "tc": "90'+40\"",
    "kind": "standard",
    "groups": [
     "open"
