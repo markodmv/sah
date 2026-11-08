@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T17:05:59.234Z",
+ "updatedAt": "2026-11-08T21:09:36.293Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -838,7 +838,7 @@
   },
   {
    "tnr": 1505152,
-   "name": "Međunarodni šahovski turnir Dan grada Makarske 2026",
+   "name": "Međunarodni šahovski turnir Dan grada Makarske i Dan Hrvatske ratne mornarice 2026",
    "url": "https://chess-results.com/tnr1505152.aspx?lan=1",
    "organizer": "Šahovski klub Makarska",
    "place": "Volicija 5, Apfel Arena Makarska",
@@ -1182,7 +1182,7 @@
    "place": "Štitar, Dom kulture, J.J. Strossmayera 36",
    "from": "2026-11-13",
    "to": "2026-11-13",
-   "rounds": 5,
+   "rounds": 7,
    "tc": "20'+5\"",
    "kind": "rapid",
    "groups": [
