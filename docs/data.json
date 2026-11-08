@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T00:33:48.576Z",
+ "updatedAt": "2026-11-08T11:16:32.969Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -642,6 +642,22 @@
    ]
   },
   {
+   "tnr": 1522497,
+   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž16",
+   "url": "https://chess-results.com/tnr1522497.aspx?lan=1",
+   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
+   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
+   "from": "2026-11-06",
+   "to": "2026-11-06",
+   "rounds": 6,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "U16",
+    "zene"
+   ]
+  },
+  {
    "tnr": 1535822,
    "name": "Pojedinačno prvenstvo Hrvatske za slijepe i slabovidne 2026 - ubrzano",
    "url": "https://chess-results.com/tnr1535822.aspx?lan=1",
@@ -889,7 +905,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 6,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -904,7 +920,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 2,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -935,7 +951,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 6,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -982,7 +998,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 5,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -997,7 +1013,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 6,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -1013,27 +1029,11 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 5,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
     "U16"
-   ]
-  },
-  {
-   "tnr": 1522497,
-   "name": "Pojedinačno ubrzano prvenstvo Koprivničko-križevačke županije za kadete i mlade -Ž16",
-   "url": "https://chess-results.com/tnr1522497.aspx?lan=1",
-   "organizer": "Šahovski savez Koprivničko-križevačke županije, Koprivnica",
-   "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
-   "from": "2026-11-08",
-   "to": "2026-11-08",
-   "rounds": null,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "U16",
-    "zene"
    ]
   },
   {
@@ -1044,7 +1044,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 2,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -1059,7 +1059,7 @@
    "place": "hotel Picok, Đurđevac, Trg sv. Jurja 9.",
    "from": "2026-11-08",
    "to": "2026-11-08",
-   "rounds": null,
+   "rounds": 2,
    "tc": "10'+5\"",
    "kind": "rapid",
    "groups": [
@@ -1307,6 +1307,36 @@
    "kind": "rapid",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1537484,
+   "name": "25. Šahovski Turnir U Kraljevici „ Sveti Nikola “",
+   "url": "https://chess-results.com/tnr1537484.aspx?lan=1",
+   "organizer": "ŠK Kraljevica",
+   "place": "Hotel Kraljevica, Strossmayerova 33, Kraljevica",
+   "from": "2026-11-29",
+   "to": "2026-11-29",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1537485,
+   "name": "25. Šahovski Turnir U Kraljevici „ Sveti Nikola “ - kadetski turnir",
+   "url": "https://chess-results.com/tnr1537485.aspx?lan=1",
+   "organizer": "ŠK Kraljevica",
+   "place": "Hotel Kraljevica, Strossmayerova 33, Kraljevica",
+   "from": "2026-11-29",
+   "to": "2026-11-29",
+   "rounds": 7,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "kadeti"
    ]
   },
   {
