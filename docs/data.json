@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T20:52:40.210Z",
+ "updatedAt": "2026-11-08T00:33:48.576Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -1763,15 +1763,17 @@
     "std": -10,
     "rapid": -48
    },
-   "upcoming": [
+   "upcoming": [],
+   "recent": [
     {
      "tnr": 1507981,
      "name": "Otvoreno prvenstvo OBŽ-a u ubrzanom šahu",
      "url": "https://chess-results.com/tnr1507981.aspx?lan=1",
-     "from": "2026-11-07"
+     "from": "2026-11-07",
+     "to": "2026-11-07",
+     "result": null
     }
    ],
-   "recent": [],
    "note": null
   }
  ]
