@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-09T12:49:42.170Z",
+ "updatedAt": "2026-11-09T23:00:04.620Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -721,7 +721,7 @@
    "name": "Memorijalni Turnir Aleksandar Vukić 2026.",
    "url": "https://chess-results.com/tnr1525845.aspx?lan=1",
    "organizer": "ŠK Aer, Udruga BRANA, Partneri za šah",
-   "place": "Zagreb, Mjesni odbor Janko Matko, Ulica Franje Horvata Kiša 12",
+   "place": "Zagreb, Mjesni odbor Janko Matko",
    "from": "2026-11-07",
    "to": "2026-11-07",
    "rounds": 9,
@@ -1385,6 +1385,21 @@
    ]
   },
   {
+   "tnr": 1538376,
+   "name": "Advent u Mariji Bistrici",
+   "url": "https://chess-results.com/tnr1538376.aspx?lan=1",
+   "organizer": "Sportska zajednica općine Marija Bistrica",
+   "place": "Marija Bistrica",
+   "from": "2026-11-29",
+   "to": "2026-11-29",
+   "rounds": 11,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1530446,
    "name": "28 ženski šahovski turnir \"Čarobni prsten\" otvoreno pojedinačno prvenstvo OBŽ",
    "url": "https://chess-results.com/tnr1530446.aspx?lan=1",
@@ -1559,6 +1574,21 @@
    "to": "2027-01-09",
    "rounds": 9,
    "tc": "90'",
+   "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1538288,
+   "name": "15. open Krapina 15.-17.1.2027.",
+   "url": "https://chess-results.com/tnr1538288.aspx?lan=1",
+   "organizer": "Šahovski klub Krapina",
+   "place": "Vatrogasni dom, Zagrebačka 1, Krapina",
+   "from": "2027-01-15",
+   "to": "2027-01-17",
+   "rounds": 7,
+   "tc": "60'+30\"",
    "kind": "standard",
    "groups": [
     "open"
