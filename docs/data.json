@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-09T23:00:04.620Z",
+ "updatedAt": "2026-11-10T12:36:42.027Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -430,7 +430,7 @@
   },
   {
    "tnr": 1532852,
-   "name": "29.Bozicni rejting Fid-e turnir 3.11.-7.12.2026.ŠK Ruscica",
+   "name": "29.Bozicni rejting FIDE turnir 3.11.-7.12.2026.ŠK Ruscica",
    "url": "https://chess-results.com/tnr1532852.aspx?lan=1",
    "organizer": "Šahovski klub Ruščica",
    "place": "Ivane Brlić Mažuranić 3. 35208 Ruščica",
@@ -1340,6 +1340,21 @@
    ]
   },
   {
+   "tnr": 1538557,
+   "name": "Jesen na Kupi 2026.",
+   "url": "https://chess-results.com/tnr1538557.aspx?lan=1",
+   "organizer": "Karlovački šahovski klub, Karlovac",
+   "place": "Prostorija, prostor udruge Carpe Diem, M.Krešića 4, Karlovac u 10:00 sati",
+   "from": "2026-11-15",
+   "to": "2026-11-15",
+   "rounds": 13,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1504571,
    "name": "II. Memorijalni šahovski turnir \"Vebi Abazi\", 22.11.2026., Ploče",
    "url": "https://chess-results.com/tnr1504571.aspx?lan=1",
@@ -1847,6 +1862,21 @@
    "kind": null,
    "groups": [
     "zene"
+   ]
+  },
+  {
+   "tnr": 1538553,
+   "name": "Obiteljski",
+   "url": "https://chess-results.com/tnr1538553.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "open"
    ]
   }
  ],
