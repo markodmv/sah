@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-10T12:36:42.027Z",
+ "updatedAt": "2026-11-10T20:28:44.967Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -1120,7 +1120,7 @@
    "place": "Zagreb, Hotel Aristos, Cebini ul. 33",
    "from": "2026-11-11",
    "to": "2026-11-19",
-   "rounds": null,
+   "rounds": 9,
    "tc": "90'+40\"",
    "kind": "standard",
    "groups": [
@@ -1545,6 +1545,36 @@
    "rounds": 9,
    "tc": "60'+30\"",
    "kind": "standard",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1538739,
+   "name": "XIII. Memorijal Mišela Bertusija - A turnir",
+   "url": "https://chess-results.com/tnr1538739.aspx?lan=1",
+   "organizer": "ŠK Križevci",
+   "place": "Križevci, Restoran & catering \"Chill Out\", Trg Svetog Florijana 17",
+   "from": "2026-12-13",
+   "to": "2026-12-13",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
+   "tnr": 1538744,
+   "name": "XIII. Memorijal Mišela Bertusija - B turnir",
+   "url": "https://chess-results.com/tnr1538744.aspx?lan=1",
+   "organizer": "ŠK Križevci",
+   "place": "Križevci, Restoran & catering \"Chill Out\", Trg Svetog Florijana 17",
+   "from": "2026-12-13",
+   "to": "2026-12-13",
+   "rounds": 9,
+   "tc": "7'+3\"",
+   "kind": "blitz",
    "groups": [
     "open"
    ]
