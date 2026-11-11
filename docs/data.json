@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-10T20:28:44.967Z",
+ "updatedAt": "2026-11-11T01:14:50.891Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -88,21 +88,6 @@
    "rounds": 9,
    "tc": "90'+30\"",
    "kind": "standard",
-   "groups": [
-    "open"
-   ]
-  },
-  {
-   "tnr": 1529048,
-   "name": "Berba maslina u Travnom - brzopotezni turnir ŠK Travno",
-   "url": "https://chess-results.com/tnr1529048.aspx?lan=1",
-   "organizer": "ŠK Travno",
-   "place": "Božidara Magovca 63, Travno",
-   "from": "2026-10-27",
-   "to": "2026-10-27",
-   "rounds": 9,
-   "tc": "3'+2\"",
-   "kind": "blitz",
    "groups": [
     "open"
    ]
@@ -1113,6 +1098,21 @@
    ]
   },
   {
+   "tnr": 1538816,
+   "name": "Jesen u Travnom - brzopotezni turnir ŠK Travno",
+   "url": "https://chess-results.com/tnr1538816.aspx?lan=1",
+   "organizer": "ŠK Travno",
+   "place": "Božidara Magovca 63, Zagreb",
+   "from": "2026-11-10",
+   "to": "2026-11-10",
+   "rounds": 11,
+   "tc": "3'+2\"",
+   "kind": "blitz",
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1537707,
    "name": "Turnir mira - Tournament of Peace 2026.",
    "url": "https://chess-results.com/tnr1537707.aspx?lan=1",
@@ -1125,6 +1125,21 @@
    "kind": "standard",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1538809,
+   "name": "Prvenstvo školskih sportskih društava Primorsko-goranske žup. - OŠ dječaci 2026/2027",
+   "url": "https://chess-results.com/tnr1538809.aspx?lan=1",
+   "organizer": "Savez školskih sportskih društava PGŽ",
+   "place": "Rijeka",
+   "from": "2026-11-11",
+   "to": "2026-11-11",
+   "rounds": 7,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "skole"
    ]
   },
   {
