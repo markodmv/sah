@@ -3,21 +3,7 @@
 import { useActionState, useEffect, useMemo, useRef, useState, useSyncExternalStore, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { dodajIgraca, ukloniIgraca } from "./actions";
-import { odjava } from "./login/actions";
-
-export type Turnir = {
-  tnr: number; naziv: string; url: string; organizator: string | null; mjesto: string | null;
-  datum_od: string | null; datum_do: string | null; kola: number | null; tempo: string | null;
-  vrsta: "standard" | "rapid" | "blitz" | null; skupine: string[];
-};
-type Rejting = { std?: number | null; rapid?: number | null; blitz?: number | null };
-export type Igrac = {
-  id: string; ime: string; fide_id: number | null; titula: string | null; godina_rodenja: number | null;
-  federacija: string | null; rejting: Rejting; promjena: Rejting;
-  prijave: { tnr: number; naziv: string; url: string; od: string | null }[];
-  nedavno: { tnr: number; naziv: string; url: string; do: string | null; rezultat: string | null }[];
-  napomena: string | null; azurirano: string | null;
-};
+import type { Igrac, Turnir } from "@/lib/sah/tipovi";
 
 const DOBI: [string, string][] = [
   ["sve", "Svi"], ["mladi", "Mladi (sve)"], ["U8", "U8"], ["U10", "U10"], ["U12", "U12"], ["U14", "U14"],
@@ -33,7 +19,8 @@ const STARO_MS = 60 * 60_000; // starije od sat vremena → osvježi pri otvaran
 const danas = () => new Date().toISOString().slice(0, 10);
 const plusDana = (iso: string, n: number) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const datum = (iso: string | null) => { if (!iso) return ""; const [y, m, d] = iso.split("-"); return `${+d}. ${+m}. ${y}.`; };
-const vrijeme = (iso: string) => new Date(iso).toLocaleString("hr-HR", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" });
+// Uvijek hrvatsko vrijeme (server na Vercelu radi u UTC-u)
+const vrijeme = (iso: string) => new Date(iso).toLocaleString("hr-HR", { timeZone: "Europe/Zagreb", day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" });
 
 function stanjeTurnira(t: Turnir) {
   const d = danas();
@@ -173,9 +160,6 @@ export default function Sah({ turniri, igraci, osvjezeno }: { turniri: Turnir[];
                 <div className="empty">Još ne pratiš nijednog igrača. Upiši ime gore.</div>
               )}
             </div>
-            <form action={odjava} style={{ display: "flex", justifyContent: "center" }}>
-              <button className="odjava" type="submit">Odjava</button>
-            </form>
           </section>
         )}
       </main>

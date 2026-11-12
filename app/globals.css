@@ -98,7 +98,6 @@ main.sadrzaj { padding-block: 14px calc(84px + env(safe-area-inset-bottom, 0px))
 .mini li span { color: var(--muted); font-family: var(--f-mono); font-size: 12px; flex: none; text-align: right; }
 .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
 .links a { color: var(--accent); }
-.odjava { align-self: center; background: none; border: 0; color: var(--muted); font: 500 13px var(--f-body); text-decoration: underline; cursor: pointer; padding: 8px; }
 
 nav.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
 nav.tabs .in { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; }
@@ -106,8 +105,5 @@ nav.tabs button { font: 600 13px var(--f-body); background: none; border: 0; col
 nav.tabs button span { font-size: 22px; line-height: 1.1; }
 nav.tabs button[aria-selected="true"] { color: var(--accent); }
 
-.login { min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 24px max(16px, env(safe-area-inset-right, 0px)) 24px max(16px, env(safe-area-inset-left, 0px)); }
-.login form { width: 100%; max-width: 360px; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
-.login label { font: 500 13px var(--f-body); display: flex; flex-direction: column; gap: 4px; }
 
 @media (prefers-reduced-motion: no-preference) { .t, .chip { transition: border-color .15s, background .15s; } }

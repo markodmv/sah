@@ -1,5 +1,4 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { createAdminClient } from "@/lib/supabase/admin";
 import { osvjeziSve } from "@/lib/sah/osvjezi";
 
 export const maxDuration = 60;
@@ -10,7 +9,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ greska: "Nije dopušteno." }, { status: 401 });
   }
   try {
-    return NextResponse.json(await osvjeziSve(createAdminClient()));
+    return NextResponse.json(await osvjeziSve());
   } catch (e) {
     return NextResponse.json({ greska: e instanceof Error ? e.message : "Osvježavanje nije uspjelo." }, { status: 502 });
   }
