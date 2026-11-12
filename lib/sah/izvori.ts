@@ -35,7 +35,7 @@ export async function paralelno<T, R>(stavke: T[], n: number, posao: (s: T) => P
   return rezultati;
 }
 
-const ENT: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
+const ENT: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", frac12: "½" };
 const dekodiraj = (s: string) =>
   s
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))

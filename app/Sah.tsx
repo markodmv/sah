@@ -1,12 +1,14 @@
 "use client";
 
 import { useActionState, useEffect, useMemo, useRef, useState, useSyncExternalStore, useTransition } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { dodajIgraca, ukloniIgraca } from "./actions";
 import type { Igrac, Turnir } from "@/lib/sah/tipovi";
+import { ljepsiNaziv } from "@/lib/sah/prikaz";
 
 const DOBI: [string, string][] = [
-  ["sve", "Svi"], ["mladi", "Mladi (sve)"], ["U8", "U8"], ["U10", "U10"], ["U12", "U12"], ["U14", "U14"],
+  ["sve", "Svi"], ["mladi", "Mladi (sve)"], ["U8", "U08"], ["U10", "U10"], ["U12", "U12"], ["U14", "U14"],
   ["U16", "U16"], ["U18", "U18"], ["U20", "U20"], ["skole", "Škole"], ["zene", "Žene"], ["seniori", "Seniori"], ["open", "Open"],
 ];
 const TEMPI: [string, string][] = [["sve", "Svi tempi"], ["standard", "♚ Standardni"], ["rapid", "♞ Ubrzani"], ["blitz", "♟ Brzopotezni"]];
@@ -86,6 +88,7 @@ export default function Sah({ turniri, igraci, osvjezeno }: { turniri: Turnir[];
   useEffect(() => {
     if (automatski.current) return;
     automatski.current = true;
+    if (location.hash === "#igraci") setKartica("p");
     if (!osvjezeno || Date.now() - Date.parse(osvjezeno) > STARO_MS) setTimeout(osvjezi, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -149,7 +152,7 @@ export default function Sah({ turniri, igraci, osvjezeno }: { turniri: Turnir[];
             )}
             <p className="note">
               Izvor: <a href="https://chess-results.com/fed.aspx?lan=1&fed=CRO" target="_blank" rel="noopener">chess-results.com – federacija CRO</a>.
-              Dodir na turnir otvara njegovu stranicu.
+              Dodir na turnir otvara poredak, parove po kolima i igrače, po kategorijama.
             </p>
           </section>
         ) : (
@@ -191,13 +194,13 @@ function KarticaTurnira({ t, igraci }: { t: Turnir; igraci: Igrac[] }) {
   const dobne = (t.skupine || []).filter((g) => g !== "open").map((g) => SKUPINA_NAZIV[g] || g);
   const praceni = igraci.filter((p) => (p.prijave || []).some((u) => u.tnr === t.tnr));
   return (
-    <a className={`t ${st === "past" ? "past" : ""}`} href={t.url} target="_blank" rel="noopener">
+    <Link className={`t ${st === "past" ? "past" : ""}`} href={`/turnir/${t.tnr}`}>
       <div className="date">{d ? <><b>{d.getUTCDate()}</b><small>{DANI[d.getUTCDay()]}</small></> : <b>–</b>}</div>
       <div className="t-body">
-        <div className="t-name">{t.naziv}</div>
+        <div className="t-name">{ljepsiNaziv(t.naziv)}</div>
         <div className="t-meta">{[t.mjesto, visednevni ? `${datum(t.datum_od)} – ${datum(t.datum_do)}` : ""].filter(Boolean).join(" · ")}</div>
         <div className="tags">
-          {st === "live" && <span className="tag live">U tijeku</span>}
+          {st === "live" && <span className="tag live">● Uživo</span>}
           {st === "past" && <span className="tag">Završen</span>}
           {dobne.map((a) => <span key={a} className="tag age">{a}</span>)}
           {t.vrsta && <span className="tag">{TEMPO_NAZIV[t.vrsta]}</span>}
@@ -206,7 +209,7 @@ function KarticaTurnira({ t, igraci }: { t: Turnir; igraci: Igrac[] }) {
           {praceni.map((p) => <span key={p.id} className="tag live">♚ {p.ime}</span>)}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -247,19 +250,19 @@ function KarticaIgraca({ p }: { p: Igrac }) {
       {p.prijave?.length > 0 && (
         <>
           <h3>Prijavljen na</h3>
-          <ul className="mini">{p.prijave.map((u) => <li key={u.tnr}><a href={u.url} target="_blank" rel="noopener">{u.naziv}</a><span>{datum(u.od)}</span></li>)}</ul>
+          <ul className="mini">{p.prijave.map((u) => <li key={u.tnr}><Link href={`/turnir/${u.tnr}`}>{ljepsiNaziv(u.naziv)}</Link><span>{datum(u.od)}</span></li>)}</ul>
         </>
       )}
       {p.nedavno?.length > 0 && (
         <>
           <h3>Zadnji turniri</h3>
-          <ul className="mini">{p.nedavno.map((u) => <li key={u.tnr}><a href={u.url} target="_blank" rel="noopener">{u.naziv}</a><span>{u.rezultat || datum(u.do)}</span></li>)}</ul>
+          <ul className="mini">{p.nedavno.map((u) => <li key={u.tnr}><Link href={`/turnir/${u.tnr}`}>{ljepsiNaziv(u.naziv)}</Link><span>{u.rezultat || datum(u.do)}</span></li>)}</ul>
         </>
       )}
       {p.fide_id && (
         <div className="links">
           <a href={`https://ratings.fide.com/profile/${p.fide_id}`} target="_blank" rel="noopener">FIDE profil</a>
-          <a href={`https://chessstats.app/player/${p.fide_id}`} target="_blank" rel="noopener">Povijest turnira</a>
+          <Link href={`/igrac/${p.id}`}>Povijest turnira po godinama</Link>
         </div>
       )}
       {potvrdi ? (
