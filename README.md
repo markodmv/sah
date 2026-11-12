@@ -1,9 +1,9 @@
 # Šah – turniri i igrači
 
-Mobilna web aplikacija: šahovski turniri u Hrvatskoj (izvor [chess-results.com](https://chess-results.com/fed.aspx?lan=1&fed=CRO)) po dobnim skupinama i tempu igre, te praćenje odabranih igrača (FIDE rejting, prijave, rezultati).
+Next.js aplikacija na Vercelu (https://sah-app.vercel.app) sa Supabase bazom i prijavom kao Dnevnik rada, Projekti i Troškovnici.
 
-- `docs/` – aplikacija (GitHub Pages). `docs/players.json` je popis praćenih igrača, `docs/data.json` generira skripta.
-- `scripts/update.mjs` – skupljanje podataka (Node 22, bez dodatnih paketa).
-- `.github/workflows/update.yml` – pokreće skriptu dvaput dnevno, na gumb ↻ Osvježi i kad se promijeni popis igrača, pa objavljuje stranicu.
-
-Lokalno: `node scripts/update.mjs`
+- Turniri u Hrvatskoj s [chess-results.com](https://chess-results.com/fed.aspx?lan=1&fed=CRO) po dobnim skupinama i tempu igre.
+- Praćeni igrači: FIDE rejting, prijave na turnire i rezultati.
+- Osvježavanje: gumb ↻ Osvježi, automatski pri otvaranju ako su podaci stariji od sat vremena, i dnevno u 6/7 h (Vercel cron, `vercel.json`).
+- Baza: `supabase/migrations/0001_sah.sql` (pokrenuti u Supabase SQL Editoru).
+- Objava: `npx vercel deploy --prod --scope markovasek-2296`.
