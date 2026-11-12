@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-11T19:35:26.125Z",
+ "updatedAt": "2026-11-12T01:55:14.360Z",
  "source": "https://chess-results.com/fed.aspx?lan=1&fed=CRO",
  "tournaments": [
   {
@@ -88,146 +88,6 @@
    "rounds": 9,
    "tc": "90'+30\"",
    "kind": "standard",
-   "groups": [
-    "open"
-   ]
-  },
-  {
-   "tnr": 1528160,
-   "name": "Ekipno prvenstvo ŠŠD OŠ KZŽ-e u šahu šk. godina 2026./2027. - dječaci",
-   "url": "https://chess-results.com/tnr1528160.aspx?lan=1",
-   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
-   "place": "Dom kulture, Gornje Jesenje",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 7,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528162,
-   "name": "Ekipno prvenstvo ŠŠD OŠ KZŽ-e u šahu šk. godina 2026./2027. - djevojčice",
-   "url": "https://chess-results.com/tnr1528162.aspx?lan=1",
-   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
-   "place": "Dom kulture, Gornje Jesenje",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 2,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "zene",
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528240,
-   "name": "Ekipno prvenstvo ŠŠD SŠ KZŽ-e u šahu šk. godina 2026./2027. - mladići",
-   "url": "https://chess-results.com/tnr1528240.aspx?lan=1",
-   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
-   "place": "Dom Kulture, Gornje Jesenje",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 5,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "mladi",
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528241,
-   "name": "Ekipno prvenstvo ŠŠD SŠ KZŽ-e u šahu šk. godina 2026./2027. - djevojke",
-   "url": "https://chess-results.com/tnr1528241.aspx?lan=1",
-   "organizer": "Županijski školski sportski savez Krapinsko-zagorske županije",
-   "place": "Dom kulture, Gornje Jesenje",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 2,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "zene",
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528789,
-   "name": "Prvenstvo školskih sportskih društava Primorsko-goranske žup. - OŠ djevojčice 2026/2027",
-   "url": "https://chess-results.com/tnr1528789.aspx?lan=1",
-   "organizer": "Savez školskih sportskih društava PGŽ",
-   "place": "Rijeka",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 7,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "zene",
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528790,
-   "name": "Prvenstvo školskih sportskih društava Primorsko-goranske županije - SŠ djevojke 2026/2027",
-   "url": "https://chess-results.com/tnr1528790.aspx?lan=1",
-   "organizer": "Savez školskih sportskih društava PGŽ",
-   "place": "Rijeka",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 5,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "zene",
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528885,
-   "name": "Pojedinačno prvenstvo OŠ. Ljudevita Modeca, Križevci učenici 1-4 razreda",
-   "url": "https://chess-results.com/tnr1528885.aspx?lan=1",
-   "organizer": "ŠK Križevci i OŠ. Lj. Modeca, Križevci",
-   "place": "Križevci, prostorija kluba ŠK Križevci, Potočka 26",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 5,
-   "tc": "10'+5\"",
-   "kind": "rapid",
-   "groups": [
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1528900,
-   "name": "Pojedinačno prvenstvo OŠ. Ljudevita Modeca, Križevci učenice 5-8 razreda",
-   "url": "https://chess-results.com/tnr1528900.aspx?lan=1",
-   "organizer": "ŠK Križevci i OŠ. Lj. Modeca, Križevci",
-   "place": "Križevci, prostorija kluba ŠK Križevci, Potočka 26",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 5,
-   "tc": "10'+5\"",
-   "kind": "blitz",
-   "groups": [
-    "skole"
-   ]
-  },
-  {
-   "tnr": 1529652,
-   "name": "Srijedom U Brestovcu 160",
-   "url": "https://chess-results.com/tnr1529652.aspx?lan=1",
-   "organizer": "ŠK BRESTOVAC I OPĆINA BRESTOVAC",
-   "place": "POŽEŠKA 45 BRESTOVAC",
-   "from": "2026-10-28",
-   "to": "2026-10-28",
-   "rounds": 7,
-   "tc": "10'+5\"",
-   "kind": "rapid",
    "groups": [
     "open"
    ]
@@ -1250,6 +1110,38 @@
    ]
   },
   {
+   "tnr": 1539438,
+   "name": "Prvenstvo ŠŠD srednjih škola Kc-Kž županije za š.g. 2026/2027 - mladići",
+   "url": "https://chess-results.com/tnr1539438.aspx?lan=1",
+   "organizer": "Školsko športski savez Koprivničko-križevačke županije",
+   "place": "Dvorana OŠ. Ljudevita Modeca, Križevci, Potočka 26",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 5,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "mladi",
+    "skole"
+   ]
+  },
+  {
+   "tnr": 1539490,
+   "name": "Prvenstvo ŠŠD srednjih škola Kc-Kž županije za š.g. 2026/2027 - djevojke",
+   "url": "https://chess-results.com/tnr1539490.aspx?lan=1",
+   "organizer": "Školsko športski savez Koprivničko-križevačke županije",
+   "place": "Dvorana OŠ. Ljudevita Modeca, Križevci, Potočka 26",
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "rounds": 3,
+   "tc": "10'+5\"",
+   "kind": "rapid",
+   "groups": [
+    "zene",
+    "skole"
+   ]
+  },
+  {
    "tnr": 1514696,
    "name": "XIII. otvoreno prvenstvo KZŽ-e za mlade do 12 godina, Krapina, 14.11.2026.",
    "url": "https://chess-results.com/tnr1514696.aspx?lan=1",
@@ -1385,6 +1277,192 @@
    ]
   },
   {
+   "tnr": 1539494,
+   "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: dječaci U08 ::",
+   "url": "https://chess-results.com/tnr1539494.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U08"
+   ]
+  },
+  {
+   "tnr": 1539495,
+   "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: dječaci U10 ::",
+   "url": "https://chess-results.com/tnr1539495.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U10"
+   ]
+  },
+  {
+   "tnr": 1539496,
+   "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: dječaci U12 ::",
+   "url": "https://chess-results.com/tnr1539496.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U12"
+   ]
+  },
+  {
+   "tnr": 1539497,
+   "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: djevojčice U08 ::",
+   "url": "https://chess-results.com/tnr1539497.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U08",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539498,
+   "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: djevojčice U10 ::",
+   "url": "https://chess-results.com/tnr1539498.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U10",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539499,
+   "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: djevojčice U12 ::",
+   "url": "https://chess-results.com/tnr1539499.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U12",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539533,
+   "name": "Pojedinačno Ubrzano Prvenstvo Hrvatske Za Mlade - 2026 - Do 18 Godina",
+   "url": "https://chess-results.com/tnr1539533.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotelu „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U18"
+   ]
+  },
+  {
+   "tnr": 1539534,
+   "name": "Pojedinačno Ubrzano Prvenstvo Hrvatske Za Mlade - 2026 - Do 14 Godina",
+   "url": "https://chess-results.com/tnr1539534.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotelu „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U14"
+   ]
+  },
+  {
+   "tnr": 1539535,
+   "name": "Pojedinačno Ubrzano Prvenstvo Hrvatske Za Mlade - 2026 - Do 16 Godina",
+   "url": "https://chess-results.com/tnr1539535.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotelu „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U16"
+   ]
+  },
+  {
+   "tnr": 1539536,
+   "name": "Pojedinačno Ubrzano Prvenstvo Hrvatske Za Mlade - 2026 - Do 18 Godina - Ženska Konkurencija",
+   "url": "https://chess-results.com/tnr1539536.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotelu „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U18",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539537,
+   "name": "Pojedinačno Ubrzano Prvenstvo Hrvatske Za Mlade - 2026 - Do 16 Godina - Ženska Konkurencija",
+   "url": "https://chess-results.com/tnr1539537.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotelu „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U16",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539539,
+   "name": "Pojedinačno Ubrzano Prvenstvo Hrvatske Za Mlade - 2026 - Do 14 Godina – Ženska Konkurencija",
+   "url": "https://chess-results.com/tnr1539539.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotelu „Imperial Park“",
+   "from": "2026-11-20",
+   "to": "2026-11-21",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "rapid",
+   "groups": [
+    "U14",
+    "zene"
+   ]
+  },
+  {
    "tnr": 1504571,
    "name": "II. Memorijalni šahovski turnir \"Vebi Abazi\", 22.11.2026., Ploče",
    "url": "https://chess-results.com/tnr1504571.aspx?lan=1",
@@ -1397,6 +1475,192 @@
    "kind": "rapid",
    "groups": [
     "open"
+   ]
+  },
+  {
+   "tnr": 1539509,
+   "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: dječaci U08 ::",
+   "url": "https://chess-results.com/tnr1539509.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U08"
+   ]
+  },
+  {
+   "tnr": 1539510,
+   "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: dječaci U12 ::",
+   "url": "https://chess-results.com/tnr1539510.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U12"
+   ]
+  },
+  {
+   "tnr": 1539511,
+   "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: dječaci U10 ::",
+   "url": "https://chess-results.com/tnr1539511.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "15'+10\"",
+   "kind": "blitz",
+   "groups": [
+    "U10"
+   ]
+  },
+  {
+   "tnr": 1539512,
+   "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: djevojčice U08 ::",
+   "url": "https://chess-results.com/tnr1539512.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U08",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539513,
+   "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: djevojčice U12 ::",
+   "url": "https://chess-results.com/tnr1539513.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U12",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539514,
+   "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: djevojčice U10 ::",
+   "url": "https://chess-results.com/tnr1539514.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, Hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U10",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539541,
+   "name": "Pojedinačno Brzopotezno Prvenstvo Hrvatske Za Mlade - 2026 - Do 18 Godina",
+   "url": "https://chess-results.com/tnr1539541.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U18"
+   ]
+  },
+  {
+   "tnr": 1539543,
+   "name": "Pojedinačno Brzopotezno Prvenstvo Hrvatske Za Mlade - 2026 - Do 16 Godina",
+   "url": "https://chess-results.com/tnr1539543.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U16"
+   ]
+  },
+  {
+   "tnr": 1539544,
+   "name": "Pojedinačno Brzopotezno Prvenstvo Hrvatske Za Mlade - 2026 - Do 14 Godina",
+   "url": "https://chess-results.com/tnr1539544.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U14"
+   ]
+  },
+  {
+   "tnr": 1539546,
+   "name": "Pojedinačno Brzopotezno Prvenstvo Hrvatske Za Mlade - 2026 - Do 18 Godina - Ženska Konkurencija",
+   "url": "https://chess-results.com/tnr1539546.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U18",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539547,
+   "name": "Pojedinačno Brzopotezno Prvenstvo Hrvatske Za Mlade - 2026 - Do 16 Godina - Ženska Konkurencija",
+   "url": "https://chess-results.com/tnr1539547.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U16",
+    "zene"
+   ]
+  },
+  {
+   "tnr": 1539548,
+   "name": "Pojedinačno Brzopotezno Prvenstvo Hrvatske Za Mlade - 2026 - Do 14 Godina - Ženska Konkurencija",
+   "url": "https://chess-results.com/tnr1539548.aspx?lan=1",
+   "organizer": "Hrvatski šahovski savez",
+   "place": "Vodice, hotel „Imperial Park“",
+   "from": "2026-11-22",
+   "to": "2026-11-22",
+   "rounds": 9,
+   "tc": "5'+3\"",
+   "kind": "blitz",
+   "groups": [
+    "U14",
+    "zene"
    ]
   },
   {
@@ -1910,6 +2174,21 @@
    ]
   },
   {
+   "tnr": 1524471,
+   "name": "novi turnir",
+   "url": "https://chess-results.com/tnr1524471.aspx?lan=1",
+   "organizer": null,
+   "place": null,
+   "from": null,
+   "to": null,
+   "rounds": null,
+   "tc": null,
+   "kind": null,
+   "groups": [
+    "open"
+   ]
+  },
+  {
    "tnr": 1536501,
    "name": "Prvenstvo gluhih žene 2026",
    "url": "https://chess-results.com/tnr1536501.aspx?lan=1",
@@ -1958,7 +2237,20 @@
     "std": -10,
     "rapid": -48
    },
-   "upcoming": [],
+   "upcoming": [
+    {
+     "tnr": 1539495,
+     "name": "Pojedinačno ubrzano prvenstvo Hrvatske za mlade za 2026. :: dječaci U10 ::",
+     "url": "https://chess-results.com/tnr1539495.aspx?lan=1",
+     "from": "2026-11-20"
+    },
+    {
+     "tnr": 1539511,
+     "name": "Pojedinačno brzopotezno prvenstvo Hrvatske za mlade za 2026. :: dječaci U10 ::",
+     "url": "https://chess-results.com/tnr1539511.aspx?lan=1",
+     "from": "2026-11-22"
+    }
+   ],
    "recent": [
     {
      "tnr": 1507981,
