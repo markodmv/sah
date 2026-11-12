@@ -165,6 +165,7 @@ export type Partija = { kolo: string; stol: string; protivnik: string; protivnik
 export type Kartica = {
   tnr: number; snr: number; naziv: string; kraj: string | null;
   mjesto: string | null; bodovi: string | null; performansa: string | null; promjena: string | null; rejting: string | null;
+  godina: number | null; federacija: string | null;
   partije: Partija[];
 };
 
@@ -172,8 +173,9 @@ export async function kartica(tnr: number, snr: number, zivo = false): Promise<K
   const html = await dohvatiSpremljeno(turnirUrl(tnr, `&art=9&snr=${snr}`), zivo ? 60 : 6 * 3600);
   if (!html) return null;
   const naziv = tekst(html.match(/<h2>([^<]+)<\/h2>/)?.[1] || `Turnir ${tnr}`);
+  // Zadnje pojavljivanje: podaci o igraču dolaze ispod podataka o turniru (npr. "Federation")
   const polje = (oznaka: string) => {
-    const m = html.match(new RegExp(`<td class="CR">${oznaka}</td><td class="CR">(.*?)</td>`));
+    const m = [...html.matchAll(new RegExp(`<td class="CR">${oznaka}\\s*</td><td class="CR">(.*?)</td>`, "g"))].pop();
     return m ? tekst(m[1]) || null : null;
   };
   const datum = html.match(/<td class="CR">Date<\/td><td class="CR">([^<]*)<\/td>/)?.[1];
@@ -195,6 +197,7 @@ export async function kartica(tnr: number, snr: number, zivo = false): Promise<K
     tnr, snr, naziv, kraj: datum ? datum.split(" to ").pop()!.replace(/\//g, "-").trim() : null,
     mjesto: polje("Rank"), bodovi: polje("Points"), performansa: polje("Performance rating"),
     promjena: polje("FIDE rtg \\+/-") || polje("Rating \\+/-"), rejting: polje("Rating international") || polje("Rating"),
+    godina: broj(polje("Year of birth") ?? undefined), federacija: polje("Federation"),
     partije,
   };
 }
@@ -203,7 +206,10 @@ export async function kartica(tnr: number, snr: number, zivo = false): Promise<K
 
 export type NastupIgraca = { tnr: number; snr: number; naziv: string; kraj: string | null; kola: number | null };
 
-export async function turniriIgraca(fideId: number): Promise<NastupIgraca[]> {
+type RedPretrage = NastupIgraca & { ime: string; fide: number | null };
+
+// Pretraga igrača na chess-results (ASP.NET obrazac): po FIDE ID-u ili po imenu
+async function pretrazi(polja: Record<string, string>): Promise<RedPretrage[]> {
   try {
     const url = `${CR}/SpielerSuche.aspx?lan=1`;
     const r1 = await fetch(url, { headers: { "User-Agent": UA }, cache: "no-store", signal: AbortSignal.timeout(15000) });
@@ -214,29 +220,89 @@ export async function turniriIgraca(fideId: number): Promise<NastupIgraca[]> {
     for (const m of forma.matchAll(/<input type="hidden" name="([^"]+)" id="[^"]*" value="([^"]*)"/g)) tijelo.set(m[1], m[2]);
     tijelo.set("ctl00$P1$combo_Sort", "2");
     tijelo.set("ctl00$P1$combo_anzahl_zeilen", "1");
-    tijelo.set("ctl00$P1$txt_fideID", String(fideId));
+    for (const [k, v] of Object.entries(polja)) tijelo.set(`ctl00$P1$${k}`, v);
     tijelo.set("ctl00$P1$cb_suchen", "Search");
     const r2 = await fetch(akcija, {
       method: "POST", body: tijelo, cache: "no-store", signal: AbortSignal.timeout(20000),
       headers: { "User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded", Cookie: kolacic, Referer: r1.url },
     });
     const html = await r2.text();
-    const out: NastupIgraca[] = [];
+    const out: RedPretrage[] = [];
     const vidjeno = new Set<number>();
     for (const red of html.split(/<tr class="CRn?g[12]"/).slice(1)) {
-      const k = red.match(/tnr(\d+)\.aspx\?lan=1&amp;art=9&amp;snr=(\d+)/);
+      const k = red.match(/tnr(\d+)\.aspx\?lan=1&amp;art=9&amp;snr=(\d+)">([^<]*)</);
       if (!k || vidjeno.has(+k[1])) continue;
       vidjeno.add(+k[1]);
       const c = [...red.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => tekst(m[1]));
       const datum = c.find((x) => /^\d{4}\/\d{2}\/\d{2}$/.test(x));
       const naziv = tekst(red.match(/tnr\d+\.aspx\?lan=1">([^<]*)</)?.[1] || "");
       const iDat = datum ? c.indexOf(datum) : -1;
-      out.push({ tnr: +k[1], snr: +k[2], naziv, kraj: datum ? datum.replace(/\//g, "-") : null, kola: iDat >= 0 ? broj(c[iDat + 2]) : null });
+      out.push({
+        tnr: +k[1], snr: +k[2], naziv, kraj: datum ? datum.replace(/\//g, "-") : null, kola: iDat >= 0 ? broj(c[iDat + 2]) : null,
+        ime: tekst(k[3]), fide: broj(c[2]) || null,
+      });
     }
     return out;
   } catch {
     return [];
   }
+}
+
+export async function turniriIgraca(fideId: number): Promise<NastupIgraca[]> {
+  return pretrazi({ txt_fideID: String(fideId) });
+}
+
+// FIDE ID po imenu (ratings.fide.com ne odgovara Vercelovim serverima): samo jednoznačan pogodak
+export async function fideIdPoImenu(punoIme: string): Promise<number | null> {
+  const rijeci = punoIme.trim().split(/\s+/);
+  if (rijeci.length < 2) return null;
+  const trazi = kljucImena(punoIme);
+  // "Ime Prezime" ili "Prezime Ime"
+  for (const [prezime, ime] of [[rijeci.slice(-1).join(" "), rijeci.slice(0, -1).join(" ")], [rijeci[0], rijeci.slice(1).join(" ")]]) {
+    const redovi = await pretrazi({ txt_nachname: prezime, txt_vorname: ime });
+    const idovi = new Set(redovi.filter((r) => r.fide && kljucImena(r.ime) === trazi).map((r) => r.fide!));
+    if (idovi.size === 1) return [...idovi][0];
+    if (idovi.size > 1) return null; // više igrača istog imena: ne pogađaj
+  }
+  return null;
+}
+
+// Vrsta tempa turnira iz zaglavlja na chess-results (pamti se dugo)
+async function tempoTurnira(tnr: number): Promise<"standard" | "rapid" | "blitz" | null> {
+  const html = await dohvatiSpremljeno(turnirUrl(tnr, "&turdet=YES"), 7 * 86400);
+  const m = html?.match(/<td class="CR">Time control \(([^)]+)\)/i);
+  if (!m) return null;
+  const v = m[1].toLowerCase();
+  return v.includes("blitz") ? "blitz" : v.includes("rapid") ? "rapid" : "standard";
+}
+
+export type RejtingIgraca = {
+  rejting: { std: number | null; rapid: number | null; blitz: number | null };
+  promjena: { std?: number; rapid?: number; blitz?: number };
+  godina: number | null; federacija: string | null;
+};
+
+// Službeni FIDE rejtinzi s kojima je igrač ušao u zadnje turnire na chess-results,
+// za svaki tempo posebno (nadolazeći turniri imaju najnoviju listu)
+export async function rejtingIgraca(fideId: number): Promise<RejtingIgraca | null> {
+  const nastupi = (await turniriIgraca(fideId)).sort((a, b) => (b.kraj || "").localeCompare(a.kraj || ""));
+  if (!nastupi.length) return null;
+  const kljuc = { standard: "std", rapid: "rapid", blitz: "blitz" } as const;
+  const out: RejtingIgraca = { rejting: { std: null, rapid: null, blitz: null }, promjena: {}, godina: null, federacija: null };
+  for (const n of nastupi.slice(0, 15)) {
+    if (out.rejting.std && out.rejting.rapid && out.rejting.blitz) break;
+    const vrsta = await tempoTurnira(n.tnr);
+    if (!vrsta || out.rejting[kljuc[vrsta]]) continue;
+    const k = await kartica(n.tnr, n.snr);
+    const rtg = broj(k?.rejting ?? undefined);
+    if (!k || !rtg) continue;
+    out.rejting[kljuc[vrsta]] = rtg;
+    const pr = broj(k.promjena ?? undefined);
+    if (pr) out.promjena[kljuc[vrsta]] = Math.round(pr);
+    out.godina ??= k.godina;
+    out.federacija ??= k.federacija;
+  }
+  return out;
 }
 
 // Je li ime iz tablice netko od praćenih igrača

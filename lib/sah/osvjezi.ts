@@ -3,9 +3,10 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase/admin";
 import {
-  POPIS_URL, dohvati, paralelno, procitajPopis, procitajTurnir, procitajPoredak, procitajFide,
-  nadiFideId, skupine, urediNaziv, kljucImena,
+  POPIS_URL, dohvati, paralelno, procitajPopis, procitajTurnir, procitajPoredak,
+  skupine, urediNaziv, kljucImena,
 } from "./izvori";
+import { fideIdPoImenu, rejtingIgraca } from "./chessresults";
 import type { Igrac, Rejting, TurnirZapis } from "./tipovi";
 
 const PAMTI_DANA = 120; // završene turnire čuvamo radi rezultata igrača
@@ -45,7 +46,7 @@ async function dohvatiTurnire(postojeci: TurnirZapis[]) {
   return [...poTnr.values()].filter((t) => !t.datum_do || t.datum_do >= plusDana(danas(), -PAMTI_DANA));
 }
 
-// FIDE profil, prijave i rezultati; vraća ažurirane igrače (turniri dobivaju zapamćene rezultate)
+// FIDE ID, rejting, prijave i rezultati; vraća ažurirane igrače (turniri dobivaju zapamćene rezultate)
 async function dohvatiIgrace(igraci: Igrac[], turniri: TurnirZapis[]) {
   const poredci = new Map<number, Promise<ReturnType<typeof procitajPoredak> | null>>();
 
@@ -58,20 +59,22 @@ async function dohvatiIgrace(igraci: Igrac[], turniri: TurnirZapis[]) {
         if (pogodak) { fideId = pogodak.f; break; }
       }
     }
-    if (!fideId) fideId = await nadiFideId(igrac.ime);
+    if (!fideId) fideId = await fideIdPoImenu(igrac.ime);
 
-    const profil = fideId ? await dohvati(`https://ratings.fide.com/profile/${fideId}`).then((h) => (h ? procitajFide(h) : null)) : null;
+    // ratings.fide.com ne odgovara Vercelovim serverima, pa rejting uzimamo s chess-results:
+    // službeni FIDE rejting s kojim je igrač ušao u zadnji turnir svakog tempa
+    const cr = fideId ? await rejtingIgraca(fideId) : null;
     const stari = igrac.rejting || {};
-    const rejting: Rejting = profil?.rejting ?? stari;
-    const promjena: Rejting = { ...igrac.promjena };
-    for (const k of ["std", "rapid", "blitz"] as const) {
-      const a = stari[k], b = rejting[k];
-      if (a && b && a !== b) promjena[k] = b - a;
-    }
+    const rejting: Rejting = {
+      std: cr?.rejting.std ?? stari.std ?? null,
+      rapid: cr?.rejting.rapid ?? stari.rapid ?? null,
+      blitz: cr?.rejting.blitz ?? stari.blitz ?? null,
+    };
+    const promjena: Rejting = cr ? cr.promjena : { ...igrac.promjena };
+    const profil = cr ? { godina: cr.godina, federacija: cr.federacija, titula: null } : null;
 
     const kljuc = fideId ? String(fideId) : kljucIme;
-    const fideKljuc = profil ? kljucImena(profil.fideIme) : null;
-    const jeOn = (ime: string, f?: number | null) => (!!fideId && f === fideId) || kljucImena(ime) === kljucIme || kljucImena(ime) === fideKljuc;
+    const jeOn = (ime: string, f?: number | null) => (!!fideId && f === fideId) || kljucImena(ime) === kljucIme;
 
     const prijave: Igrac["prijave"] = [];
     const nedavno: Igrac["nedavno"] = [];
@@ -100,7 +103,7 @@ async function dohvatiIgrace(igraci: Igrac[], turniri: TurnirZapis[]) {
       fide_id: fideId,
       titula: profil?.titula ?? igrac.titula,
       godina_rodenja: profil?.godina ?? igrac.godina_rodenja,
-      federacija: profil?.federacija ?? igrac.federacija,
+      federacija: profil?.federacija ? (/CRO/.test(profil.federacija) ? "Hrvatska" : profil.federacija) : igrac.federacija,
       rejting, promjena, prijave, nedavno: nedavno.slice(0, 8),
       napomena: fideId ? null : "FIDE ID nije pronađen ili ima više igrača s tim imenom. Ukloni igrača i dodaj ga ponovno s FIDE ID-om.",
       azurirano: new Date().toISOString(),
