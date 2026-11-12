@@ -4,6 +4,7 @@ import { useActionState, useEffect, useMemo, useRef, useState, useSyncExternalSt
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { dodajIgraca, ukloniIgraca } from "./actions";
+import { odjava } from "./login/actions";
 import type { Igrac, Turnir } from "@/lib/sah/tipovi";
 import { ljepsiNaziv } from "@/lib/sah/prikaz";
 
@@ -61,7 +62,9 @@ function usePamceno(kljuc: string, pocetno: string): [string, (v: string) => voi
   return [v, postavi];
 }
 
-export default function Sah({ turniri, igraci, osvjezeno }: { turniri: Turnir[]; igraci: Igrac[]; osvjezeno: string | null }) {
+type Korisnik = { ime: string; admin: boolean; naCekanju: number };
+
+export default function Sah({ turniri, igraci, osvjezeno, korisnik }: { turniri: Turnir[]; igraci: Igrac[]; osvjezeno: string | null; korisnik: Korisnik }) {
   const router = useRouter();
   const [kartica, setKartica] = usePamceno("sah.kartica", "t");
   const [dob, setDob] = usePamceno("sah.dob", "sve");
@@ -157,12 +160,20 @@ export default function Sah({ turniri, igraci, osvjezeno }: { turniri: Turnir[];
           </section>
         ) : (
           <section className="view">
+            {korisnik.admin && korisnik.naCekanju > 0 && (
+              <Link className="obavijest" href="/admin">{korisnik.naCekanju === 1 ? "1 nova registracija čeka odobrenje" : `${korisnik.naCekanju} registracije čekaju odobrenje`} →</Link>
+            )}
             <DodajIgraca />
             <div className="list">
               {igraci.length ? igraci.map((p) => <KarticaIgraca key={p.id} p={p} />) : (
                 <div className="empty">Još ne pratiš nijednog igrača. Upiši ime gore.</div>
               )}
             </div>
+            <form className="dno" action={odjava}>
+              <span className="note">{korisnik.ime}</span>
+              {korisnik.admin && <Link href="/admin">Korisnici{korisnik.naCekanju ? ` (${korisnik.naCekanju})` : ""}</Link>}
+              <button className="odjava" type="submit">Odjava</button>
+            </form>
           </section>
         )}
       </main>

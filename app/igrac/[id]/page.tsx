@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { citaj } from "@/lib/sah/pohrana";
+import { zahtijevajOdobrenog } from "@/lib/auth";
+import type { Igrac } from "@/lib/sah/tipovi";
 import { turniriIgraca } from "@/lib/sah/chessresults";
 import Povijest from "./Povijest";
 
@@ -8,8 +9,9 @@ export const dynamic = "force-dynamic";
 
 export default async function IgracStranica({ params }: PageProps<"/igrac/[id]">) {
   const { id } = await params;
-  const { podaci } = await citaj();
-  const igrac = podaci.igraci.find((i) => i.id === id);
+  const { supabase } = await zahtijevajOdobrenog();
+  const { data } = await supabase.from("igraci").select("id, ime, fide_id, titula, godina_rodenja, rejting").eq("id", id).maybeSingle();
+  const igrac = data as Pick<Igrac, "id" | "ime" | "fide_id" | "titula" | "godina_rodenja" | "rejting"> | null;
   if (!igrac) notFound();
 
   const nastupi = igrac.fide_id ? await turniriIgraca(Number(igrac.fide_id)) : [];

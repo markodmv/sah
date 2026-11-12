@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { citaj } from "@/lib/sah/pohrana";
+import { zahtijevajOdobrenog } from "@/lib/auth";
 import { kartica, prepoznaj, turnirDetalji, turnirUrl } from "@/lib/sah/chessresults";
 import TurnirPrikaz from "./TurnirPrikaz";
 
@@ -14,7 +14,12 @@ export default async function TurnirStranica({ params, searchParams }: PageProps
   const tnr = Number(tnrTekst);
   if (!Number.isInteger(tnr) || tnr <= 0) notFound();
 
-  const { podaci } = await citaj();
+  const { supabase } = await zahtijevajOdobrenog();
+  const [{ data: sviTurniri }, { data: mojiIgraci }] = await Promise.all([
+    supabase.from("turniri").select("tnr, naziv, datum_od, datum_do"),
+    supabase.from("igraci").select("id, ime, fide_id"),
+  ]);
+  const podaci = { turniri: sviTurniri ?? [], igraci: mojiIgraci ?? [] };
   const spremljen = podaci.turniri.find((t) => t.tnr === tnr);
   const d = danas();
   const zivo = !!spremljen?.datum_od && spremljen.datum_od <= d && (!spremljen.datum_do || spremljen.datum_do >= d);

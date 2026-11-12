@@ -1,10 +1,11 @@
 // Osvježavanje turnira i praćenih igrača (samo na serveru).
-// Dohvaćanje s weba radi na kopiji podataka, a promjene se na kraju spajaju u pohranu.
+// Dohvaćanje s weba radi na kopiji podataka, a promjene se na kraju spremaju u Supabase.
+import type { SupabaseClient } from "@supabase/supabase-js";
+import { createAdminClient } from "@/lib/supabase/admin";
 import {
   POPIS_URL, dohvati, paralelno, procitajPopis, procitajTurnir, procitajPoredak, procitajFide,
   nadiFideId, skupine, urediNaziv, kljucImena,
 } from "./izvori";
-import { citaj, promijeni } from "./pohrana";
 import type { Igrac, Rejting, TurnirZapis } from "./tipovi";
 
 const PAMTI_DANA = 120; // završene turnire čuvamo radi rezultata igrača
@@ -107,55 +108,71 @@ async function dohvatiIgrace(igraci: Igrac[], turniri: TurnirZapis[]) {
   });
 }
 
-// Spoji osvježene igrače u pohranu: igrači uklonjeni u međuvremenu ostaju uklonjeni
-function spojiIgrace(trenutni: Igrac[], osvjezeni: Igrac[]) {
-  const poId = new Map(osvjezeni.map((i) => [i.id, i]));
-  return trenutni.map((i) => {
-    const o = poId.get(i.id);
-    return o ? { ...o, ime: i.ime } : i;
+// ---------- spremanje u Supabase (service role) ----------
+
+const POLJA_TURNIRA = "tnr, naziv, url, organizator, mjesto, datum_od, datum_do, kola, tempo, vrsta, skupine, prijavljeni, rezultati";
+const POLJA_IGRACA = "id, ime, fide_id, titula, godina_rodenja, federacija, rejting, promjena, prijave, nedavno, napomena, azurirano";
+
+async function ucitajTurnire(db: SupabaseClient) {
+  const { data, error } = await db.from("turniri").select(POLJA_TURNIRA);
+  if (error) throw new Error(error.message);
+  return (data ?? []) as TurnirZapis[];
+}
+
+async function spremiIgrace(db: SupabaseClient, igraci: Igrac[]) {
+  await paralelno(igraci, 5, async ({ id, ...polja }) => {
+    await db.from("igraci").update(polja).eq("id", id);
   });
 }
 
+// Spremi samo rezultate koji su se promijenili tijekom osvježavanja
+async function spremiRezultate(db: SupabaseClient, turniri: TurnirZapis[], prije: Map<number, string>) {
+  const promijenjeni = turniri.filter((t) => JSON.stringify(t.rezultati || {}) !== prije.get(t.tnr));
+  await paralelno(promijenjeni, 5, async (t) => {
+    await db.from("turniri").update({ rezultati: t.rezultati }).eq("tnr", t.tnr);
+  });
+}
+
+const snimkaRezultata = (turniri: TurnirZapis[]) => new Map(turniri.map((t) => [t.tnr, JSON.stringify(t.rezultati || {})]));
+
 // Novi igrač: odmah pronađi FIDE ID, rejting, prijave i rezultate
 export async function osvjeziIgraca(id: string) {
-  const { podaci } = await citaj();
-  const igrac = podaci.igraci.find((i) => i.id === id);
-  if (!igrac) return;
-  const [osvjezen] = await dohvatiIgrace([igrac], podaci.turniri);
-  const rezultati = new Map(podaci.turniri.map((t) => [t.tnr, t.rezultati]));
-  await promijeni((p) => {
-    p.igraci = spojiIgrace(p.igraci, [osvjezen]);
-    for (const t of p.turniri) if (rezultati.has(t.tnr)) t.rezultati = { ...t.rezultati, ...rezultati.get(t.tnr) };
-  });
+  const db = createAdminClient();
+  const { data } = await db.from("igraci").select(POLJA_IGRACA).eq("id", id).maybeSingle();
+  if (!data) return;
+  const turniri = await ucitajTurnire(db);
+  const prije = snimkaRezultata(turniri);
+  await spremiIgrace(db, await dohvatiIgrace([data as Igrac], turniri));
+  await spremiRezultate(db, turniri, prije);
 }
 
 // Cijelo osvježavanje; preskače ako je drugo u tijeku ili je upravo završilo
 export async function osvjeziSve() {
-  const pocetak = new Date().toISOString();
-  const smije = await promijeni((p) => {
-    const pokrenuto = p.pokrenuto ? Date.parse(p.pokrenuto) : 0;
-    const osvjezeno = p.osvjezeno ? Date.parse(p.osvjezeno) : 0;
-    if (pokrenuto > osvjezeno && Date.now() - pokrenuto < ZAKLJUCANO_MS) return false;
-    if (Date.now() - osvjezeno < NAJMANJI_RAZMAK_MS) return false;
-    p.pokrenuto = pocetak;
-    return true;
-  });
-  if (!smije) return { preskoceno: true };
+  const db = createAdminClient();
+  const { data: s } = await db.from("stanje").select("osvjezeno, pokrenuto").eq("id", 1).maybeSingle();
+  const pokrenuto = s?.pokrenuto ? Date.parse(s.pokrenuto) : 0;
+  const osvjezeno = s?.osvjezeno ? Date.parse(s.osvjezeno) : 0;
+  if (pokrenuto > osvjezeno && Date.now() - pokrenuto < ZAKLJUCANO_MS) return { preskoceno: true };
+  if (Date.now() - osvjezeno < NAJMANJI_RAZMAK_MS) return { preskoceno: true };
+  await db.from("stanje").upsert({ id: 1, pokrenuto: new Date().toISOString() });
 
   try {
-    const { podaci } = await citaj();
-    const turniri = await dohvatiTurnire(podaci.turniri);
-    const igraci = await dohvatiIgrace(podaci.igraci, turniri);
-    await promijeni((p) => {
-      p.turniri = turniri;
-      p.igraci = spojiIgrace(p.igraci, igraci);
-      p.osvjezeno = new Date().toISOString();
-      p.greska = null;
-    });
+    const stari = await ucitajTurnire(db);
+    const turniri = await dohvatiTurnire(stari);
+    const prije = snimkaRezultata(turniri);
+    const { data: igraciData } = await db.from("igraci").select(POLJA_IGRACA);
+    const igraci = await dohvatiIgrace((igraciData ?? []) as Igrac[], turniri);
+
+    const { error } = await db.from("turniri").upsert(turniri.map((t) => ({ ...t, azurirano: new Date().toISOString() })), { onConflict: "tnr" });
+    if (error) throw new Error(error.message);
+    await db.from("turniri").delete().lt("datum_do", plusDana(danas(), -PAMTI_DANA));
+    await spremiIgrace(db, igraci);
+    await spremiRezultate(db, turniri, prije);
+    await db.from("stanje").update({ osvjezeno: new Date().toISOString(), greska: null }).eq("id", 1);
     return { turniri: turniri.length, igraci: igraci.length };
   } catch (e) {
     const greska = e instanceof Error ? e.message : String(e);
-    await promijeni((p) => { p.pokrenuto = null; p.greska = greska; });
+    await db.from("stanje").update({ pokrenuto: null, greska }).eq("id", 1);
     throw e;
   }
 }

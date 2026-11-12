@@ -22,10 +22,3 @@ export type Igrac = {
   napomena: string | null; azurirano: string | null;
 };
 
-export type Podaci = {
-  turniri: TurnirZapis[];
-  igraci: Igrac[];
-  osvjezeno: string | null;
-  pokrenuto: string | null;
-  greska: string | null;
-};
