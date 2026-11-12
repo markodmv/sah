@@ -7,6 +7,7 @@ import {
   skupine, urediNaziv, kljucImena,
 } from "./izvori";
 import { fideIdPoImenu, rejtingIgraca } from "./chessresults";
+import { fideIdPoImenuFide, fideIgrac } from "./fidelista";
 import type { Igrac, Rejting, TurnirZapis } from "./tipovi";
 
 const PAMTI_DANA = 120; // završene turnire čuvamo radi rezultata igrača
@@ -52,7 +53,7 @@ async function dohvatiIgrace(igraci: Igrac[], turniri: TurnirZapis[]) {
 
   return paralelno(igraci, 3, async (igrac): Promise<Igrac> => {
     const kljucIme = kljucImena(igrac.ime);
-    let fideId = igrac.fide_id ? Number(igrac.fide_id) : null;
+    let fideId = igrac.fide_id ? Number(igrac.fide_id) : await fideIdPoImenuFide(igrac.ime);
     if (!fideId) {
       for (const t of turniri) {
         const pogodak = (t.prijavljeni || []).find((p) => p.f && kljucImena(p.n) === kljucIme);
@@ -61,17 +62,28 @@ async function dohvatiIgrace(igraci: Igrac[], turniri: TurnirZapis[]) {
     }
     if (!fideId) fideId = await fideIdPoImenu(igrac.ime);
 
-    // ratings.fide.com ne odgovara Vercelovim serverima, pa rejting uzimamo s chess-results:
-    // službeni FIDE rejting s kojim je igrač ušao u zadnji turnir svakog tempa
-    const cr = fideId ? await rejtingIgraca(fideId) : null;
+    // Rejting sa službene FIDE liste (preko Lichessa); ako nije dostupan, s chess-results:
+    // FIDE rejting s kojim je igrač ušao u zadnji turnir svakog tempa
+    const fide = fideId ? await fideIgrac(fideId) : null;
+    const cr = fideId && !fide ? await rejtingIgraca(fideId) : null;
     const stari = igrac.rejting || {};
+    const novi = fide?.rejting ?? cr?.rejting;
     const rejting: Rejting = {
-      std: cr?.rejting.std ?? stari.std ?? null,
-      rapid: cr?.rejting.rapid ?? stari.rapid ?? null,
-      blitz: cr?.rejting.blitz ?? stari.blitz ?? null,
+      std: novi?.std ?? stari.std ?? null,
+      rapid: novi?.rapid ?? stari.rapid ?? null,
+      blitz: novi?.blitz ?? stari.blitz ?? null,
     };
+    // Promjena: razlika prema prošloj listi (FIDE), odnosno iz zadnjeg turnira (chess-results)
     const promjena: Rejting = cr ? cr.promjena : { ...igrac.promjena };
-    const profil = cr ? { godina: cr.godina, federacija: cr.federacija, titula: null } : null;
+    if (fide) {
+      for (const k of ["std", "rapid", "blitz"] as const) {
+        const a = stari[k], b = rejting[k];
+        if (a && b && a !== b) promjena[k] = b - a;
+      }
+    }
+    const profil = fide
+      ? { godina: fide.godina, federacija: fide.federacija, titula: fide.titula }
+      : cr ? { godina: cr.godina, federacija: cr.federacija, titula: null } : null;
 
     const kljuc = fideId ? String(fideId) : kljucIme;
     const jeOn = (ime: string, f?: number | null) => (!!fideId && f === fideId) || kljucImena(ime) === kljucIme;
