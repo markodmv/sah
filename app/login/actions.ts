@@ -1,8 +1,8 @@
 "use server";
 
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function prijava(_prev: string | null, formData: FormData) {
   const email = String(formData.get("email") ?? "").trim();
@@ -18,28 +18,30 @@ export async function prijava(_prev: string | null, formData: FormData) {
   redirect("/");
 }
 
-export type StanjeRegistracije = { greska?: string; poslano?: boolean } | null;
+export type StanjeRegistracije = { greska?: string } | null;
 
+// Registracija bez čekanja: račun se napravi već potvrđen i odobren, a korisnik se odmah prijavi
 export async function registracija(_prev: StanjeRegistracije, formData: FormData): Promise<StanjeRegistracije> {
   const ime = String(formData.get("ime") ?? "").trim().slice(0, 80);
-  const email = String(formData.get("email") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
   if (!ime) return { greska: "Upiši ime i prezime." };
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { greska: "Upiši ispravan email." };
   if (password.length < 8) return { greska: "Lozinka mora imati barem 8 znakova." };
 
-  const h = await headers();
-  const izvor = `${h.get("x-forwarded-proto") ?? "https"}://${h.get("host")}`;
-  const supabase = await createClient();
-  const { data, error } = await supabase.auth.signUp({
-    email, password,
-    options: { data: { ime }, emailRedirectTo: `${izvor}/cekanje` },
+  const admin = createAdminClient();
+  const { data, error } = await admin.auth.admin.createUser({
+    email, password, email_confirm: true, user_metadata: { ime },
   });
-  if (error) {
-    return { greska: /registered|exists/i.test(error.message) ? "Ovaj email je već registriran. Prijavi se." : "Registracija nije uspjela. Provjeri email i pokušaj ponovno." };
+  if (error || !data.user) {
+    return { greska: /registered|exists/i.test(error?.message ?? "") ? "Ovaj email je već registriran. Prijavi se." : "Registracija nije uspjela. Pokušaj ponovno." };
   }
-  // Ako potvrda emaila nije uključena, korisnik je odmah prijavljen i čeka odobrenje
-  if (data.session) redirect("/cekanje");
-  return { poslano: true };
+  await admin.from("profili").update({ odobren: true }).eq("id", data.user.id);
+
+  const supabase = await createClient();
+  const { error: greskaPrijave } = await supabase.auth.signInWithPassword({ email, password });
+  if (greskaPrijave) return { greska: "Račun je napravljen, ali prijava nije uspjela. Prijavi se ručno." };
+  redirect("/");
 }
 
 export async function odjava() {
